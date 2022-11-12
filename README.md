@@ -1,5 +1,3 @@
-### POKEMON TYPE GUESSER
+### My Folio
 
-Devinez les types des pokémon
-
---- En cours ---
+--- Work In Progress ---
