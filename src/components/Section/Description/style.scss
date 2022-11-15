@@ -1,0 +1,50 @@
+@use '/src/styles/_vars.scss';
+
+@keyframes slidein {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 285px
+  }
+}
+
+.text-container {
+  width: 606px;
+  padding-top: 177px;
+}
+
+.button_container {
+  display: flex;
+  gap: 24px;
+}
+
+.nicolas-img {
+  position: absolute;
+  z-index: 1;
+  top: 107px;
+  left: 800px;
+  cursor: pointer;
+}
+
+.glasses-img {
+  cursor: pointer;
+  width: 140px;
+  position: absolute;
+  top: 210px;
+  left: 1012px;
+  z-index: 2;
+  animation: slidein 1s linear forwards;
+}
+
+.description_ellipse {
+  position: absolute;
+  width: 986px;
+  height: 986px;
+  left: 800px;
+  top: -415px;
+  border-radius: 50%;
+  
+  background: radial-gradient(90.14% 100% at 50% 0%, vars.$base-color 0%, rgba(45, 0, 102, 0) 100%);
+  transform: rotate(37.39deg);
+}

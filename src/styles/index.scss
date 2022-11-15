@@ -2,7 +2,24 @@
 @use 'vars';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  line-height: 23.7px;
+}
+
+.base_color {
+  color: vars.$base-color;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.section_title {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /* 

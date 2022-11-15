@@ -1,0 +1,16 @@
+.card {
+  height: 60px;
+  color: #777;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &_img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+}

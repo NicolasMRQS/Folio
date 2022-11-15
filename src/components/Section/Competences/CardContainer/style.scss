@@ -1,0 +1,19 @@
+.card-container {
+  margin: 180px 40px;
+  width: 600px;
+  height: 325px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+    &__cards-list {
+      width: 600px;
+      min-height: 325px;
+      max-height: 325px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      gap: 16px;
+    }
+}

@@ -1,0 +1,60 @@
+@use '/src/styles/vars';
+
+@keyframes shake {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.competences {
+
+  &__contents-container {
+    display: flex;
+  }
+
+  &__text-container {
+    width: 440px;
+    padding-top: 141px;
+  }
+
+  &__list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__list {
+    z-index: 1;
+    
+    &:hover {
+      cursor: pointer;
+      font-weight: 700;
+      text-shadow: 0 0 18px adjust-color(vars.$base-color, $lightness: +40%);
+    }
+
+    &--active{
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 18px adjust-color(vars.$base-color, $lightness: +40%);
+      animation: shake 0.8s infinite ease-in-out;
+    }
+  }
+}
+
+.competences_ellipse {
+  position: absolute;
+  width: 766px;
+  height: 766px;
+  left: -85px;
+  top: -190px;
+  border-radius: 50%;
+
+  background: radial-gradient(92.54% 72.85% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(118.47deg);
+}

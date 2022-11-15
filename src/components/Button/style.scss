@@ -1,0 +1,18 @@
+@use '/src/styles/vars';
+
+.button {
+  background-color: transparent;
+  padding: 12px 32px;
+  border: 3px solid vars.$base-color;
+  border-radius: 8px;
+  color: vars.$base-color;
+  font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  transition: 0.2s;
+
+  &:hover {
+    color: vars.$white-color;
+    background-color: vars.$base_color;
+    transition: 0.2s;
+  }
+}

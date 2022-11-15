@@ -1,0 +1,37 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: -210px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover .project-card__img{
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+
+  &:hover .project-card__label{
+    text-decoration: underline;
+  }
+
+  &__img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    transition: all 0.3s;
+  }
+
+  &__label {
+    font-size: 24px;
+    font-family: 'Gilroy-Bold', sans-serif;
+  }
+
+  &:nth-child(even) {
+    align-self: flex-start;
+  }
+
+  &:first-child {
+    margin-top: -99px;
+  }
+}
