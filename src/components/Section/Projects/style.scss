@@ -11,5 +11,15 @@
     flex-direction: column;
     align-items: flex-end;
     gap: -100px;
+
+    &:hover .project-card {
+      filter: grayscale(80%);
+      transition: all 0.3s linear;
+    }
+
+    &:hover .project-card:hover {
+      filter: none;
+      transition: all 0.3s linear;
+    }
   }
 }

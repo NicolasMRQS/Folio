@@ -25,7 +25,7 @@ function Description() {
         </p>
       </div>
       <div className="button_container" style={{ marginTop: '80px' }}>
-        <Button text="Say Hi" />
+        <Button text="Say Hi" baseColor="true" />
         <Button text="Mon CV" />
       </div>
       <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />

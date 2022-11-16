@@ -15,4 +15,17 @@
     background-color: vars.$base_color;
     transition: 0.2s;
   }
+
+  &--color {
+    color: vars.$white-color;
+    background-color: vars.$base_color;
+    transition: 0.2s;
+
+    &:hover {
+      color: vars.$base_color;
+      background-color: vars.$white-color;
+      transition: 0.2s;
+    }
+  }
+
 }
