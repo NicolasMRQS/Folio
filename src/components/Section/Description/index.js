@@ -10,6 +10,14 @@ import glassesImg from '../../../assets/img/glasses3.png';
 function Description() {
   const [glasses, setGlasses] = useState(false);
 
+  const handleClickCV = () => {
+    console.log('a')
+    const alink = document.createElement('a');
+    alink.href = '/src/assets/pdf/CV.pdf';
+    alink.download = 'SamplePDF.pdf';
+    alink.click();
+  };
+
   return (
     <Section height="809px">
       <div className="text-container">
@@ -26,7 +34,9 @@ function Description() {
       </div>
       <div className="button_container" style={{ marginTop: '80px' }}>
         <Button text="Say Hi" baseColor="true" />
-        <Button text="Mon CV" />
+        <a href="/pdf/CV.pdf" download="CV.pdf">
+          <Button text="Mon CV" />
+        </a>
       </div>
       <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />
       {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}

@@ -30,7 +30,7 @@ function Competences() {
         </div>
         <CardContainer activeCategorie={activeCategorie} />
       </div>
-      <div className="competences_ellipse" />
+      <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (45 * (activeCategorie - 1))}deg)` }} />
     </Section>
   );
 }
