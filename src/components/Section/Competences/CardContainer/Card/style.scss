@@ -1,5 +1,8 @@
+@use '/src/styles/vars';
+
 .card {
   height: 60px;
+  box-shadow: 0 0 8px adjust-color(vars.$base-color, $lightness: +40%);
   color: #777;
   background-color: #fff;
   padding: 16px;

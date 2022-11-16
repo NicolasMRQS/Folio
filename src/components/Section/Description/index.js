@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import Button from '../../Button';
 import Section from '..';
@@ -33,14 +34,16 @@ function Description() {
         </p>
       </div>
       <div className="button_container" style={{ marginTop: '80px' }}>
-        <Button text="Say Hi" baseColor="true" />
+        <Button label="Say Hi" color="base" full />
         <a href="/pdf/CV.pdf" download="CV.pdf">
-          <Button text="Mon CV" />
+          <Button label="Mon CV" color="base" />
         </a>
       </div>
       <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />
       {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}
-      <div className="description_ellipse" />
+      <Parallax translateY={["-1000px", "-100px"]} >
+        <div className="description_ellipse" />
+      </Parallax>
     </Section>
   );
 }

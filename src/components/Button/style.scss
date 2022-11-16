@@ -3,29 +3,61 @@
 .button {
   background-color: transparent;
   padding: 12px 32px;
-  border: 3px solid vars.$base-color;
+  border: 3px solid;
   border-radius: 8px;
-  color: vars.$base-color;
   font-size: 16px;
   font-family: 'Space Mono', monospace;
   transition: 0.2s;
 
-  &:hover {
-    color: vars.$white-color;
-    background-color: vars.$base_color;
-    transition: 0.2s;
-  }
-
-  &--color {
-    color: vars.$white-color;
-    background-color: vars.$base_color;
+  &_base-color {
+    color: vars.$base-color;
+    background-color: transparent;
+    border-color: vars.$base-color;
     transition: 0.2s;
 
     &:hover {
-      color: vars.$base_color;
-      background-color: vars.$white-color;
+      color: vars.$white-color;
+      background-color: vars.$base-color;
       transition: 0.2s;
+    }
+
+    &--full {
+      color: vars.$white-color;
+      background-color: vars.$base-color;
+      border-color: vars.$base-color;
+      transition: 0.2s;
+
+      &:hover {
+        color: vars.$base-color;
+        background-color: transparent;
+        transition: 0.2s;
+      }
     }
   }
 
+  &_white-color {
+    color: vars.$white-color;
+    background-color: transparent;
+    border-color: vars.$white-color;
+    transition: 0.2s;
+
+    &:hover {
+      color: vars.$base-color;
+      background-color: vars.$white-color;
+      transition: 0.2s;
+    }
+
+    &--full {
+      color: vars.$base-color;
+      background-color: vars.$white-color;
+      border-color: vars.$white-color;
+      transition: 0.2s;
+
+      &:hover {
+        color: vars.$white-color;
+        background-color: transparent;
+        transition: 0.2s;
+      }
+    }
+  }
 }

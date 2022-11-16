@@ -1,0 +1,31 @@
+import { Parallax } from 'react-scroll-parallax';
+
+import Section from '..';
+import Button from '../../Button';
+import './style.scss';
+
+function Contact() {
+
+  return (
+    <Section height="594px">
+      <div className="contact__text-container">
+				<p className="contact__subtitle" style={{ marginTop: '114px' }}>What's Next ?</p>
+				<h2 className="contact__big-title" style={{ marginTop: '40px' }}>Get in Touch</h2>
+			</div>
+      <div className="contact__button-container" style={{ marginTop: '48px' }}>
+        <Button label="Say Hi !" color="white" full />
+				<a href="https://github.com/NicolasMRQS/" target="_blank">
+        	<Button label="Github" color="white" />
+				</a>
+				<a href="https://www.linkedin.com/in/nicolas-marques-dev/" target="_blank">
+        	<Button label="LinkedIn" color="white" />
+				</a>
+      </div>
+			<Parallax translateY={["-70px", "-1000px"]}>
+				<div className="contact__ellipse" />
+			</Parallax>
+    </Section>
+  );
+}
+
+export default Contact;

@@ -13,8 +13,12 @@ function Section({ children, height }) {
 }
 
 Section.propTypes = {
-  height: PropTypes.string.isRequired,
+  height: PropTypes.string,
   children: PropTypes.node.isRequired,
+};
+
+Section.DefaultProps = {
+  height: "auto",
 };
 
 export default Section;

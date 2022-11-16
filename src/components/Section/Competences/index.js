@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import Section from '..';
 import CardContainer from './CardContainer';
@@ -30,7 +31,9 @@ function Competences() {
         </div>
         <CardContainer activeCategorie={activeCategorie} />
       </div>
-      <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (45 * (activeCategorie - 1))}deg)` }} />
+      <Parallax translateY={["-1000px", "-500px"]}>
+        <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
+      </Parallax>
     </Section>
   );
 }
