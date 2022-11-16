@@ -1,4 +1,5 @@
 .card-container {
+  z-index: 1;
   margin: 180px 40px;
   width: 600px;
   height: 325px;
@@ -11,6 +12,7 @@
       width: 600px;
       min-height: 325px;
       max-height: 325px;
+      padding-left: 10px;
       display: flex;
       flex-wrap: wrap;
       align-content: center;

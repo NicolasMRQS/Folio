@@ -11,13 +11,13 @@ import glassesImg from '../../../assets/img/glasses3.png';
 function Description() {
   const [glasses, setGlasses] = useState(false);
 
-  const handleClickCV = () => {
-    console.log('a')
-    const alink = document.createElement('a');
-    alink.href = '/src/assets/pdf/CV.pdf';
-    alink.download = 'SamplePDF.pdf';
-    alink.click();
-  };
+  // const handleClickCV = () => {
+  //   console.log('a')
+  //   const alink = document.createElement('a');
+  //   alink.href = '/src/assets/pdf/CV.pdf';
+  //   alink.download = 'SamplePDF.pdf';
+  //   alink.click();
+  // };
 
   return (
     <Section height="809px">
@@ -41,7 +41,7 @@ function Description() {
       </div>
       <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />
       {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}
-      <Parallax translateY={["-1000px", "-100px"]} >
+      <Parallax translateY={['-1200px', '-300px']}>
         <div className="description_ellipse" />
       </Parallax>
     </Section>

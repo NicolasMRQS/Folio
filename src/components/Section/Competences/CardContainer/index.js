@@ -4,7 +4,7 @@ import Card from './Card';
 
 import './style.scss';
 
-function CardContainer({ activeCategorie, setListScrollY }) {
+function CardContainer({ activeCategorie }) {
   const listRef = useRef(null);
 
   useEffect(() => {

@@ -7,7 +7,7 @@ import './style.scss';
 function ProjectCard({ label, url }) {
   return (
     <figure className="project-card">
-      <ParallaxBanner className="project-card__img" layers={[{ image: zenGardener, speed: -15 }]} />
+      <ParallaxBanner className="project-card__img" layers={[{ image: zenGardener, speed: -15 }]} style={{ width: '450px', height: '450px' }} />
         {/* <img src={zenGardener} alt={label} className="project-card__img" /> */}
       <figcaption className="project-card__label">{label}</figcaption>
     </figure>
