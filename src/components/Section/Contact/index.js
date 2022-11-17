@@ -6,7 +6,7 @@ import './style.scss';
 
 function Contact() {
   return (
-    <Section height="594px">
+    <Section height="594px" id="contact">
       <div className="contact__text-container">
         <p className="contact__subtitle" style={{ marginTop: '114px' }}>What's Next ?</p>
         <h2 className="contact__big-title" style={{ marginTop: '40px' }}>Get in Touch</h2>

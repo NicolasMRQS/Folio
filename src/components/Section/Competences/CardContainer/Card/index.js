@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { logoData } from '../../../../../utils/logo';
+import logoData from '../../../../../assets/img/logo/logo';
 
 import './style.scss';
 
@@ -14,6 +14,11 @@ function Card({ label, logo }) {
 
 Card.propTypes = {
   label: PropTypes.string.isRequired,
+  logo: PropTypes.string,
+};
+
+Card.defaultProps = {
+  logo: null,
 };
 
 export default Card;

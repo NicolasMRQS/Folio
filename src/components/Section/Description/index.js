@@ -11,16 +11,8 @@ import glassesImg from '../../../assets/img/glasses3.png';
 function Description() {
   const [glasses, setGlasses] = useState(false);
 
-  // const handleClickCV = () => {
-  //   console.log('a')
-  //   const alink = document.createElement('a');
-  //   alink.href = '/src/assets/pdf/CV.pdf';
-  //   alink.download = 'SamplePDF.pdf';
-  //   alink.click();
-  // };
-
   return (
-    <Section height="809px">
+    <Section height="809px" id="competences">
       <div className="text-container">
         <span className="base_color bold">Hello ! </span><span className="base_color bold">Je suis</span>
         <h1 className="section_title" style={{ marginTop: '24px' }}>Nicolas Marques</h1>

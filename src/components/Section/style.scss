@@ -3,6 +3,7 @@
 .section {
   margin: auto;
   overflow: hidden;
+  position: relative;
 
   &:nth-child(odd) {
     background-color: vars.$white-color;
