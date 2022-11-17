@@ -17,34 +17,37 @@ function CardContainer({ activeCategorie }) {
   return (
     <div className="card-container" ref={listRef}>
       <div className="card-container__cards-list">
-        <Card label="Javascript" />
-        <Card label="React" />
-        <Card label="Redux" />
-        <Card label="Axios" />
-        <Card label="SASS" />
-        <Card label="SocketIO" />
-        <Card label="JSX" />
-        <Card label="Babel" />
-        <Card label="Webpack" />
+        <Card label="Javascript" logo="javascript" />
+        <Card label="React" logo="react" />
+        <Card label="Redux" logo="redux" />
+        <Card label="Axios" logo="axios" />
+        <Card label="SASS" logo="sass" />
+        <Card label="SocketIO" logo="socketio" />
+        <Card label="JSX" logo="jsx" />
+        <Card label="Babel" logo="babel" />
+        <Card label="Webpack" logo="webpack" />
       </div>
       <div className="card-container__cards-list">
-        <Card label="HTML5" />
-        <Card label="CSS3" />
-        <Card label="Javascript" />
-        <Card label="Bulma" />
+        <Card label="HTML5" logo="html5" />
+        <Card label="CSS3" logo="css3" />
+        <Card label="Javascript" logo="javascript" />
+        <Card label="Bulma" logo="bulma" />
       </div>
       <div className="card-container__cards-list">
-        <Card label="NodeJS" />
-        <Card label="SQL" />
-        <Card label="PostgreSQL" />
-        <Card label="EJS" />
-        <Card label="Sequelize" />
-        <Card label="Strapi" />
+        <Card label="NodeJS" logo="nodejs" />
+        <Card label="SQL" logo="sql" />
+        <Card label="PostgreSQL" logo="postgresql" />
+        <Card label="EJS" logo="ejs" />
+        <Card label="Sequelize" logo="sequelize" />
+        <Card label="Strapi" logo="strapi" />
       </div>
       <div className="card-container__cards-list">
-        <Card label="HTML5" />
-        <Card label="CSS3" />
-        <Card label="Bulma" />
+        <Card label="Rédaction cahier des charges" />
+        <Card label="Méthode agile" />
+        <Card label="Wireframes" />
+        <Card label="User stories" />
+        <Card label="MCD" />
+        <Card label="Git / Github" />
       </div>
     </div>
   );

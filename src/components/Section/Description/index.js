@@ -22,7 +22,7 @@ function Description() {
   return (
     <Section height="809px">
       <div className="text-container">
-        <span className="base_color bold">Hello !</span>
+        <span className="base_color bold">Hello ! </span><span className="base_color bold">Je suis</span>
         <h1 className="section_title" style={{ marginTop: '24px' }}>Nicolas Marques</h1>
         <p style={{ marginTop: '48px' }}>
           Ancien intermittent du spectacle, j'ai suivi une formation intensive pour devenir

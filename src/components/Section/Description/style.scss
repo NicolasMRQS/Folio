@@ -1,6 +1,7 @@
 @use '/src/styles/_vars.scss';
+@use '/src/styles/animation.scss';
 
-@keyframes slidein {
+@keyframes fall {
   from {
     top: -100px;
   }
@@ -12,11 +13,13 @@
 .text-container {
   width: 606px;
   padding-top: 177px;
+  animation: slidein 0.5s ease-in;
 }
 
 .button_container {
   display: flex;
   gap: 24px;
+  animation: slidein 0.5s ease-in;
 }
 
 .nicolas-img {
@@ -34,7 +37,7 @@
   top: 210px;
   left: 1012px;
   z-index: 2;
-  animation: slidein 1s linear forwards;
+  animation: fall 1s linear forwards;
 }
 
 .description_ellipse {
