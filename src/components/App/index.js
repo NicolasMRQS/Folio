@@ -1,4 +1,5 @@
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Nav from '../Nav';
 import Competences from '../Section/Competences';
@@ -11,13 +12,15 @@ import './style.scss';
 function App() {
   return (
     <ParallaxProvider>
-      <Nav />
-      <main className="app">
-        <Description />
-        <Competences />
-        <Projects />
-        <Contact />
-      </main>
+      <Router>
+        <Nav />
+        <main className="app">
+          <Description />
+          <Competences />
+          <Projects />
+          <Contact />
+        </main>
+      </Router>
     </ParallaxProvider>
   );
 }

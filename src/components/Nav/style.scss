@@ -21,9 +21,16 @@
     width: 16px;
     height: 16px;
     border: 3px solid invert(vars.$base-color);
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.25);
+        transition: all 0.1s ease;
+    }
 
     &.active {
         background-color: invert(vars.$base-color);
-        transform: rotate(45deg);
+        transform: rotate(45deg) scale(1.2);
+        transition: all 0.2s ease;
     }
 }
