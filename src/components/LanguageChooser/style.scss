@@ -1,0 +1,27 @@
+@use '/src/styles/vars';
+
+.language-chooser {
+  z-index: 3;
+  position: fixed;
+  top: 16px;
+  right: 1.5%;
+  background-color: fade-out(vars.$white-color, 0.75);
+  padding: 4px 8px;
+  // border: 3px solid vars.$base-color;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  &__img {
+    width: 14px;
+    transition: all 0.1s ease;
+
+    &--active {
+      width: 24px;
+      transition: all 0.1s ease;
+    }
+  }
+}

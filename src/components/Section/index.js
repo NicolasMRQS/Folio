@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-function Section({ children, height, id }) {
+function Section({ children, id }) {
   return (
-    <section className="section" style={{ height: height }} id={id}>
-      <div className="content_container" style={{ height: height }}>
+    <section className="section" id={id}>
+      <div className="content_container">
         {children}
       </div>
     </section>
@@ -13,13 +13,11 @@ function Section({ children, height, id }) {
 }
 
 Section.propTypes = {
-  height: PropTypes.string,
   id: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 
 Section.defaultProps = {
-  height: 'auto',
   id: null,
 };
 

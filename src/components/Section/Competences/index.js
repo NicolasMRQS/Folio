@@ -10,7 +10,7 @@ function Competences() {
   const [activeCategorie, setActiveCategorie] = useState(1);
 
   return (
-    <Section height="631px" id="competences">
+    <Section id="competences">
       <div className="competences__contents-container">
         <div className="competences__text-container">
           <h2 className="section_title">Compétences</h2>

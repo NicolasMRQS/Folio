@@ -1,14 +1,26 @@
 @use '/src/styles/vars';
 
+@keyframes extend {
+  from {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
 .nav-container {
     z-index: 5;
     height: vars.$nav-height;
-    width: 25px;
+    width: 30px;
     overflow-x: hidden;
     transform: translate(-50%, -50%);
     position: fixed;
     top: 50vh;
-    right: 5%;
+    right: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,9 +40,19 @@
         transition: all 0.1s ease;
     }
 
+    &:active {
+      animation: extend 0.1s ease;
+    }
+
     &.active {
         background-color: invert(vars.$base-color);
         transform: rotate(45deg) scale(1.2);
         transition: all 0.2s ease;
     }
+}
+
+@media (max-width: vars.$phone-breakpoint) {
+  .nav-container {
+    display: none;
+  }
 }

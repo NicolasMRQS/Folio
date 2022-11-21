@@ -8,11 +8,15 @@ function Contact() {
   return (
     <Section height="594px" id="contact">
       <div className="contact__text-container">
-        <p className="contact__subtitle" style={{ marginTop: '114px' }}>What's Next ?</p>
-        <h2 className="contact__big-title" style={{ marginTop: '40px' }}>Get in Touch</h2>
+        <p className="contact__subtitle">What's Next ?</p>
+        <h2 className="contact__big-title">Get in Touch</h2>
       </div>
-      <div className="contact__button-container" style={{ marginTop: '48px' }}>
-        <Button label="Say Hi !" color="white" full />
+      <div className="contact__button-container">
+        <div className="contact__sayhi-button">
+          <a href="mailto:nicolas08.10marques@gmail.com">
+            <Button label="Say Hi !" color="white" full />
+          </a>
+        </div>
         <a href="https://github.com/NicolasMRQS/" target="_blank" rel="noreferrer">
           <Button label="Github" color="white" />
         </a>

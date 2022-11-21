@@ -1,3 +1,5 @@
+@use '/src/styles/vars';
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -26,6 +28,11 @@
     object-fit: contain;
     transition: all 0.3s;
     object-position: 0 50%;
+
+    @media (max-width: vars.$phone-breakpoint) {
+      width: 343px;
+      height: 343px;
+    }
   }
 
   &__label {
@@ -35,13 +42,23 @@
 
   &:nth-child(even) {
     align-self: flex-start;
+
+    @media (max-width: 1360px) {
+      align-self: auto;
+    }
   }
 
   &:first-child {
     margin-top: -99px;
+
+    @media (max-width: 1360px) {
+      margin-top: 32px;
+    }
   }
 }
 
-.project-card:hover .project-card:not(:hover) {
-  background-color: #f0f;
+@media (max-width: 1360px) {
+  .project-card {
+    margin-top: 0;
+  }
 }

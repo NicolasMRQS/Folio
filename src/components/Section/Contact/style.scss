@@ -1,3 +1,5 @@
+@use '/src/styles/vars';
+
 .contact {
 
     &__text-container {
@@ -9,6 +11,11 @@
         position: relative;
         z-index: 1;
         font-size: 24px;
+        margin-top: 114px;
+
+        @media (max-width: 1360px) {
+          margin-top: 64px;
+        }
     }
 
     &__big-title {
@@ -17,14 +24,32 @@
         font-size: 96px;
         font-weight: 700;
         font-family: 'Gilroy', sans-serif;
+        margin-top: 40px;
+
+        @media (max-width: 1360px) {
+          font-size: 48px;
+        }
     }
 
     &__button-container {
         position: relative;
         z-index: 1;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 36px;
+        margin-top: 48px;
+
+        @media (max-width: vars.$phone-breakpoint) {
+          // width: 450px;
+          margin: 48px auto 0;
+        }
+    }
+
+    &__sayhi-button {
+      @media (max-width: vars.$phone-breakpoint) {
+        margin: 0 calc(50% - 150px);
+      }
     }
 
     &__ellipse {
@@ -33,11 +58,17 @@
         border-radius: 50%;
         width: 1570px;
         height: 1570px;
-        left: -176px;
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
-        
         background: radial-gradient(63.52% 50% at 50% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 
+        @media (max-width: 1360px) {
+          top: 75px;
+        }
 
+        @media (max-width: vars.$phone-breakpoint) {
+          top: -40px;
+        }
     }
 }
