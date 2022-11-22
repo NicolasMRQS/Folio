@@ -10,7 +10,7 @@
   transition: all 0.3s linear;
 
   &:hover {
-    filter: grayscale(90%);
+    filter: grayscale(80%);
   }
 
   &:hover .project-card__img{
@@ -38,6 +38,7 @@
   &__label {
     font-size: 24px;
     font-family: 'Gilroy-Bold', sans-serif;
+    color: vars.$black-color;
   }
 
   &:nth-child(even) {
