@@ -7,12 +7,20 @@
 
   &:nth-child(odd) {
     background-color: vars.$white-color;
-    color: vars.$black-color;
+    color: vars.$darkgrey-color;
+    
+    & .section_title {
+      color: vars.$black-color;
+    }
   }
 
   &:nth-child(even) {
     background-color: vars.$base-color;
     color: vars.$white-color;
+
+    & > .section_title {
+      color: vars.$white-color;
+    }
   }
 }
 
