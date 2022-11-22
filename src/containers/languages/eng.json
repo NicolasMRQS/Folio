@@ -1,0 +1,15 @@
+{
+    "iam" : "I am",
+    "description" : "Former audiovisual technician, I attended an intensive training to be a web developer specialized in React. Motivated, curious and passionate about coding, my ease of learning allows me to adapt easily to new environments.",
+    "job" : "I am currently looking for my first job.",
+    "cvButton" : "My CV",
+
+    "competencesTitle" : "Skills",
+    "frontend" : "Frontend Development",
+    "integration" : "Web Integration",
+    "backend" : "Backend Development",
+    "projectManager" : "Digital project management",
+
+    "projectsTitle" : "Projects",
+    "projectsText" : "My last projects"
+}
