@@ -20,7 +20,7 @@
     width: 50%;
     padding-top: 177px;
     padding-right: 20px;
-    animation: slidein 0.5s ease-in;
+    // animation: slidein 0.5s ease-in;
   }
 
   &__button_container {
@@ -68,6 +68,10 @@
   
   background: radial-gradient(90.14% 100% at 50% 0%, vars.$base-color 0%, rgba(45, 0, 102, 0) 100%);
   transform: rotate(37.39deg);
+}
+
+#hello {
+  animation: startAnimation 2s linear forwards;
 }
 
 @media (max-width: vars.$tablet-breakpoint) {

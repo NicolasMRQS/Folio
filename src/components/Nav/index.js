@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import './style.scss';
 
 function Nav() {
@@ -27,18 +27,18 @@ function Nav() {
 
   return (
     <nav className="nav-container">
-      <NavHashLink title="Description" smooth elementId="description">
-        <div className={activeSection === 1 ? 'nav-link active' : 'nav-link'} />
-      </NavHashLink>
-      <NavHashLink title="Compétences" smooth elementId="competences">
-        <div className={activeSection === 2 ? 'nav-link active' : 'nav-link'} />
-      </NavHashLink>
-      <NavHashLink title="Projets" smooth elementId="projects">
-        <div className={activeSection === 3 ? 'nav-link active' : 'nav-link'} />
-      </NavHashLink>
-      <NavHashLink title="Contact" smooth elementId="contact">
-        <div className={activeSection === 4 ? 'nav-link active' : 'nav-link'} />
-      </NavHashLink>
+      <HashLink title="Description" smooth elementId="description">
+        <div className={activeSection === 1 ? 'nav-link isactive' : 'nav-link'} />
+      </HashLink>
+      <HashLink title="Compétences" smooth elementId="competences">
+        <div className={activeSection === 2 ? 'nav-link isactive' : 'nav-link'} />
+      </HashLink>
+      <HashLink title="Projets" smooth elementId="projects">
+        <div className={activeSection === 3 ? 'nav-link isactive' : 'nav-link'} />
+      </HashLink>
+      <HashLink title="Contact" smooth elementId="contact">
+        <div className={activeSection === 4 ? 'nav-link isactive' : 'nav-link'} />
+      </HashLink>
     </nav>
   );
 }

@@ -44,7 +44,7 @@
       animation: extend 0.1s ease;
     }
 
-    &.active {
+    &.isactive {
         background-color: invert(vars.$base-color);
         transform: rotate(45deg) scale(1.2);
         transition: all 0.2s ease;

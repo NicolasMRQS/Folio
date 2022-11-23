@@ -9,3 +9,12 @@
         opacity: 1;
     }
 }
+
+@keyframes startAnimation {
+    from {
+        transform: translateX(500px) scale(1.5);
+    }
+    to {
+        transform: none;
+    }
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import PropTypes from 'prop-types';
 
 import Button from '../../Button';
 import Section from '..';
@@ -16,7 +17,7 @@ function Description({ language }) {
     <Section id="description">
       <div className="description">
         <div className="description__text-container">
-          <span className="base_color bold">Hello ! </span>
+          <span id="hello" className="base_color bold">Hello ! </span>
           <span className="base_color bold">
             {text[language].iam}
           </span>
@@ -46,6 +47,10 @@ function Description({ language }) {
       </div>
     </Section>
   );
+}
+
+Description.propTypes = {
+  language: PropTypes.string.isRequired,
 }
 
 export default Description;

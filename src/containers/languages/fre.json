@@ -10,6 +10,9 @@
     "backend" : "Développement Backend",
     "projectManager" : "Gestion de projets numériques",
 
+    "cdc" : "Rédaction du cahier des charges",
+    "agile" : "Méthode agile",
+
     "projectsTitle" : "Projets",
     "projectsText" : "Mes derniers projets"
 }

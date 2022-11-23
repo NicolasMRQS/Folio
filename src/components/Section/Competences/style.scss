@@ -56,8 +56,12 @@
   left: -85px;
   top: -190px;
   border-radius: 50%;
-
   background: radial-gradient(92.54% 72.85% at 50% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   transform: rotate(118.47deg);
   transition: transform 0.3s ease-in;
+
+  @media (max-width: vars.$phone-breakpoint) {
+    left: auto;
+    right: 20%;
+  }
 }
