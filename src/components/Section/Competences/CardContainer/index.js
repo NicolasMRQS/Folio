@@ -56,6 +56,7 @@ function CardContainer({ activeCategorie, language }) {
 
 CardContainer.propTypes = {
   activeCategorie: PropTypes.number.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export default CardContainer;
