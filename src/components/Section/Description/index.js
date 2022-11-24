@@ -14,18 +14,18 @@ function Description({ language, helloAnimation, setHelloAnimation }) {
   const [glasses, setGlasses] = useState(false);
 
   return (
-    <Section id="description" height={helloAnimation && "100vh"}>
+    <Section id="description" height={helloAnimation && '101vh'}>
       <div className="description">
         <div className="description__text-container">
-          <span id="hello" className="base_color bold">Hello ! </span>
-          <span className="base_color bold" hidden={helloAnimation}>
+          <span id="hello" className={helloAnimation ? 'base_color bold startanimation' : 'base_color bold'}>Hello ! </span>
+          <span className="description__iam base_color bold" hidden={helloAnimation}>
             {text[language].iam}
           </span>
-          <h1 className="section_title" style={{ marginTop: '24px' }} hidden={helloAnimation}>Nicolas Marques</h1>
+          <h1 className="description__title section_title" style={{ marginTop: '24px' }} hidden={helloAnimation}>Nicolas Marques</h1>
           <p className="description__text" hidden={helloAnimation}>
             {text[language].description}
           </p>
-          <p className="base_color bold" style={{ marginTop: '24px' }} hidden={helloAnimation}>
+          <p className="description__job base_color bold" style={{ marginTop: '24px' }} hidden={helloAnimation}>
             {text[language].job}
           </p>
           <div className="description__button_container">
@@ -42,7 +42,7 @@ function Description({ language, helloAnimation, setHelloAnimation }) {
           {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}
         </div>
         <Parallax translateY={['-400px', '300px']}>
-          <div className="description_ellipse" />
+          <div className="description_ellipse" hidden={helloAnimation} />
         </Parallax>
       </div>
     </Section>
@@ -51,6 +51,6 @@ function Description({ language, helloAnimation, setHelloAnimation }) {
 
 Description.propTypes = {
   language: PropTypes.string.isRequired,
-}
+};
 
 export default Description;

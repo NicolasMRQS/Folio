@@ -20,7 +20,11 @@ function App() {
     <ParallaxProvider>
       <Router>
         <main className="app">
-          <HelloAnimation helloAnimation={helloAnimation} setHelloAnimation={setHelloAnimation} language={language}>
+          <HelloAnimation
+            helloAnimation={helloAnimation}
+            setHelloAnimation={setHelloAnimation}
+            language={language}
+          >
             <LanguageChooser language={language} setLanguage={setLanguage} />
             <Nav />
             <Description language={language} />

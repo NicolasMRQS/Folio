@@ -20,7 +20,7 @@ Section.propTypes = {
 
 Section.defaultProps = {
   id: null,
-  height: "auto",
+  height: 'auto',
 };
 
 export default Section;
