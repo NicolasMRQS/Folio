@@ -1,0 +1,7 @@
+@use '/src/styles/vars';
+
+.helloanimation {
+    height: 100vh;
+    overflow: hidden;
+    background-color: vars.$base-color;
+}

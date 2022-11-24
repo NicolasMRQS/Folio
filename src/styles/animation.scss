@@ -12,9 +12,9 @@
 
 @keyframes startAnimation {
     from {
-        transform: translateX(500px) scale(1.5);
+        transform: translateX(60vw) scale(3);
     }
     to {
-        transform: none;
+        transform: translateX(0) scale(1);
     }
 }

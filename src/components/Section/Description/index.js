@@ -10,34 +10,34 @@ import text from '../../../containers/languages';
 import profil from '../../../assets/img/profil.png';
 import glassesImg from '../../../assets/img/glasses3.png';
 
-function Description({ language }) {
+function Description({ language, helloAnimation, setHelloAnimation }) {
   const [glasses, setGlasses] = useState(false);
 
   return (
-    <Section id="description">
+    <Section id="description" height={helloAnimation && "100vh"}>
       <div className="description">
         <div className="description__text-container">
           <span id="hello" className="base_color bold">Hello ! </span>
-          <span className="base_color bold">
+          <span className="base_color bold" hidden={helloAnimation}>
             {text[language].iam}
           </span>
-          <h1 className="section_title" style={{ marginTop: '24px' }}>Nicolas Marques</h1>
-          <p className="description__text">
+          <h1 className="section_title" style={{ marginTop: '24px' }} hidden={helloAnimation}>Nicolas Marques</h1>
+          <p className="description__text" hidden={helloAnimation}>
             {text[language].description}
           </p>
-          <p className="base_color bold" style={{ marginTop: '24px' }}>
+          <p className="base_color bold" style={{ marginTop: '24px' }} hidden={helloAnimation}>
             {text[language].job}
           </p>
           <div className="description__button_container">
-            <a href="mailto:nicolas08.10marques@gmail.com">
+            <a href="mailto:nicolas08.10marques@gmail.com" hidden={helloAnimation}>
               <Button label="Say Hi" color="base" full />
             </a>
-            <a href="/pdf/CV.pdf" download="CV.pdf">
+            <a href="/pdf/CV.pdf" download="CV.pdf" hidden={helloAnimation}>
               <Button label={text[language].cvButton} color="base" />
             </a>
           </div>
         </div>
-        <div className="description__img-container">
+        <div className="description__img-container" hidden={helloAnimation}>
           <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />
           {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}
         </div>

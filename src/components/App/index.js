@@ -10,20 +10,24 @@ import Projects from '../Section/Projects';
 
 import './style.scss';
 import LanguageChooser from '../LanguageChooser';
+import HelloAnimation from '../HelloAnimation';
 
 function App() {
   const [language, setLanguage] = useState('fre');
+  const [helloAnimation, setHelloAnimation] = useState(true);
 
   return (
     <ParallaxProvider>
       <Router>
-        <LanguageChooser language={language} setLanguage={setLanguage} />
-        <Nav />
         <main className="app">
-          <Description language={language} />
-          <Competences language={language} />
-          <Projects language={language} />
-          <Contact language={language} />
+          <HelloAnimation helloAnimation={helloAnimation} setHelloAnimation={setHelloAnimation} language={language}>
+            <LanguageChooser language={language} setLanguage={setLanguage} />
+            <Nav />
+            <Description language={language} />
+            <Competences language={language} />
+            <Projects language={language} />
+            <Contact language={language} />
+          </HelloAnimation>
         </main>
       </Router>
     </ParallaxProvider>
