@@ -7,7 +7,7 @@ import './style.scss';
 function ProjectCard({ label, img, url }) {
   return (
     <a href={url} target="_blank" rel="noreferrer" className="project-card">
-      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]} style={{ width: '450px', height: '450px' }} />
+      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]} />
       <span className="project-card__label">{label}</span>
     </a>
   );

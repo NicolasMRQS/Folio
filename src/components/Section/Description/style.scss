@@ -20,6 +20,14 @@
     width: 50%;
     padding-top: 177px;
     padding-right: 20px;
+  }
+
+  &__iam {
+    margin-left: 10px;
+    animation: slidein 0.5s ease-in;
+  }
+
+  &__title {
     animation: slidein 0.5s ease-in;
   }
 
@@ -37,6 +45,11 @@
 
   &__text {
     margin-top: 48px;
+    animation: slidein 0.5s ease-in;
+  }
+
+  &__job {
+    animation: slidein 0.5s ease-in;
   }
 }
 
@@ -47,6 +60,7 @@
   bottom: -180px;
   right: 0;
   cursor: pointer;
+  animation: slidein 0.5s ease-in;
 }
 
 .glasses-img {
@@ -65,9 +79,17 @@
   right: -450px;
   top: -450px;
   border-radius: 50%;
-  
   background: radial-gradient(90.14% 100% at 50% 0%, vars.$base-color 0%, rgba(45, 0, 102, 0) 100%);
   transform: rotate(37.39deg);
+  animation: slideinEllipse 0.5s ease-in;
+}
+
+#hello {
+  display: inline-block;
+
+  &.startanimation {
+    animation: startAnimation 1s linear backwards 2s;
+  }
 }
 
 @media (max-width: vars.$tablet-breakpoint) {

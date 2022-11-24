@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import Card from './Card';
 
+import text from '../../../../containers/languages';
 import './style.scss';
 
-function CardContainer({ activeCategorie }) {
+function CardContainer({ activeCategorie, language }) {
   const listRef = useRef(null);
 
   useEffect(() => {
@@ -42,8 +43,8 @@ function CardContainer({ activeCategorie }) {
         <Card label="Strapi" logo="strapi" />
       </div>
       <div className="card-container__cards-list">
-        <Card label="Rédaction cahier des charges" />
-        <Card label="Méthode agile" />
+        <Card label={text[language].cdc} />
+        <Card label={text[language].agile} />
         <Card label="Wireframes" />
         <Card label="User stories" />
         <Card label="MCD" />
@@ -55,6 +56,7 @@ function CardContainer({ activeCategorie }) {
 
 CardContainer.propTypes = {
   activeCategorie: PropTypes.number.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export default CardContainer;

@@ -17,7 +17,7 @@
     height: vars.$nav-height;
     width: 30px;
     overflow-x: hidden;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     position: fixed;
     top: 50vh;
     right: 3%;
@@ -27,6 +27,7 @@
     align-items: center;
     gap: 28px;
     mix-blend-mode: difference;
+    animation: slideinNav 0.5s ease-in;
 }
 
 .nav-link {
@@ -44,7 +45,7 @@
       animation: extend 0.1s ease;
     }
 
-    &.active {
+    &.isactive {
         background-color: invert(vars.$base-color);
         transform: rotate(45deg) scale(1.2);
         transition: all 0.2s ease;

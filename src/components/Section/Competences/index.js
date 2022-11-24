@@ -36,7 +36,7 @@ function Competences({ language }) {
             </li>
           </ul>
         </div>
-        <CardContainer activeCategorie={activeCategorie} />
+        <CardContainer activeCategorie={activeCategorie} language={language} />
       </div>
       <Parallax translateY={['-1000px', '-500px']}>
         <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
