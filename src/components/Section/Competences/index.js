@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import { PropTypes } from 'prop-types';
 
 import Section from '..';
 import CardContainer from './CardContainer';
@@ -44,5 +45,9 @@ function Competences({ language }) {
     </Section>
   );
 }
+
+Competences.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default Competences;

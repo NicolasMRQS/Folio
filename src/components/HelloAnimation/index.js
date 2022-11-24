@@ -11,7 +11,7 @@ function HelloAnimation({
   useEffect(() => {
     setTimeout(() => {
       setHelloAnimation(false);
-    }, 3500);
+    }, 2200);
   }, []);
 
   return (
@@ -21,7 +21,6 @@ function HelloAnimation({
           <Description
             language={language}
             helloAnimation={helloAnimation}
-            setHelloAnimation={setHelloAnimation}
           />
         )}
       {!helloAnimation && <> {children} </>}
@@ -30,7 +29,10 @@ function HelloAnimation({
 }
 
 HelloAnimation.propTypes = {
-
+  children: PropTypes.node.isRequired,
+  helloAnimation: PropTypes.bool.isRequired,
+  setHelloAnimation: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
 };
 
 export default HelloAnimation;

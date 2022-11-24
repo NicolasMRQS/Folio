@@ -10,7 +10,7 @@ import text from '../../../containers/languages';
 import profil from '../../../assets/img/profil.png';
 import glassesImg from '../../../assets/img/glasses3.png';
 
-function Description({ language, helloAnimation, setHelloAnimation }) {
+function Description({ language, helloAnimation }) {
   const [glasses, setGlasses] = useState(false);
 
   return (
@@ -51,6 +51,11 @@ function Description({ language, helloAnimation, setHelloAnimation }) {
 
 Description.propTypes = {
   language: PropTypes.string.isRequired,
+  helloAnimation: PropTypes.bool,
+};
+
+Description.defaultProps = {
+  helloAnimation: false,
 };
 
 export default Description;

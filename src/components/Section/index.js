@@ -15,12 +15,15 @@ function Section({ children, id, height }) {
 Section.propTypes = {
   id: PropTypes.string,
   children: PropTypes.node.isRequired,
-  height: PropTypes.string,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+  ]),
 };
 
 Section.defaultProps = {
   id: null,
-  height: 'auto',
+  height: null,
 };
 
 export default Section;

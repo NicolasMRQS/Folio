@@ -6,7 +6,7 @@ import './style.scss';
 
 function Contact() {
   return (
-    <Section height="594px" id="contact">
+    <Section id="contact">
       <div className="contact__text-container">
         <p className="contact__subtitle">What's Next ?</p>
         <h2 className="contact__big-title">Get in Touch</h2>
