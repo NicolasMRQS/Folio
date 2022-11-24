@@ -1,6 +1,7 @@
 @use '/src/styles/vars';
 
 .project-card {
+  width: 450px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -8,6 +9,10 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s linear;
+
+  @media (max-width: vars.$phone-breakpoint) {
+    width: 343px;
+  }
 
   &:hover {
     filter: grayscale(80%);
@@ -25,7 +30,8 @@
   &__img {
     width: 450px;
     height: 450px;
-    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
     transition: all 0.3s;
     object-position: 0 50%;
     aspect-ratio: 1 / 1;
