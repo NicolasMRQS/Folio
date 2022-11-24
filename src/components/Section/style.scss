@@ -1,4 +1,5 @@
 @use '/src/styles/vars';
+@use '/src/styles/animation.scss';
 
 .section {
   margin: auto;
@@ -17,6 +18,7 @@
   &:nth-child(even) {
     background-color: vars.$base-color;
     color: vars.$white-color;
+    animation: fadein 0.5s linear;
 
     & > .section_title {
       color: vars.$white-color;
