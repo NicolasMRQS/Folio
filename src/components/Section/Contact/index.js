@@ -14,7 +14,7 @@ function Contact() {
       <div className="contact__button-container">
         <div className="contact__sayhi-button">
           <a href="mailto:nicolas08.10marques@gmail.com">
-            <Button label="Say Hi !" color="white" full />
+            <Button label="Say Hi!" color="white" full />
           </a>
         </div>
         <a href="https://github.com/NicolasMRQS/" target="_blank" rel="noreferrer">
