@@ -14,17 +14,24 @@ function Competences({ language }) {
   const [activeCategorie, setActiveCategorie] = useState(1);
 
   function Desktop({ children }) {
-    const isDesktop = useMediaQuery({ minWidth: 1024 });
+    const isDesktop = useMediaQuery({ minWidth: 1025 });
     return isDesktop ? children : null;
   }
 
-  function SmallScreen({ children }) {
-    const isSmallScreen = useMediaQuery({ maxWidth: 1023 });
-    return isSmallScreen ? children : null;
+  function Tablet({ children }) {
+    const isTablet = useMediaQuery({ minWidth: 767, maxWidth: 1024 });
+    return isTablet ? children : null;
   }
 
+  function TabletAndBelow({ children }) {
+    const isTabletAndBelow = useMediaQuery({ maxWidth: 1024 });
+    return isTabletAndBelow ? children : null;
+  }
+
+  const isMobile = useMediaQuery({ maxWidth: 766 });
+
   return (
-    <Section id="competences" height={SmallScreen ? '700px' : null}>
+    <Section id="competences" height={isMobile ? '700px' : ''}>
       <div className="competences__contents-container">
         <div className="competences__text-container">
           <h2 className="section_title">
@@ -35,7 +42,7 @@ function Competences({ language }) {
               {activeCategorie === 1 ? <span className="second-color bold">- </span> : ''}
               {text[language].frontend}
             </li>
-            <SmallScreen>
+            <TabletAndBelow>
               {activeCategorie === 1
               && (
               <div className="competences__card-container--smallscreen">
@@ -50,12 +57,12 @@ function Competences({ language }) {
                 <Card label="Webpack" logo="webpack" />
               </div>
               )}
-            </SmallScreen>
+            </TabletAndBelow>
             <li className={activeCategorie === 2 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(2)}>
               {activeCategorie === 2 ? <span className="second-color bold">- </span> : ''}
               {text[language].integration}
             </li>
-            <SmallScreen>
+            <TabletAndBelow>
               {activeCategorie === 2
               && (
               <div className="competences__card-container--smallscreen">
@@ -65,12 +72,12 @@ function Competences({ language }) {
                 <Card label="Bulma" logo="bulma" />
               </div>
               )}
-            </SmallScreen>
+            </TabletAndBelow>
             <li className={activeCategorie === 3 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(3)}>
               {activeCategorie === 3 ? <span className="second-color bold">- </span> : ''}
               {text[language].backend}
             </li>
-            <SmallScreen>
+            <TabletAndBelow>
               {activeCategorie === 3
               && (
               <div className="competences__card-container--smallscreen">
@@ -83,12 +90,12 @@ function Competences({ language }) {
                 <Card label="Strapi" logo="strapi" />
               </div>
               )}
-            </SmallScreen>
+            </TabletAndBelow>
             <li className={activeCategorie === 4 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(4)}>
               {activeCategorie === 4 ? <span className="second-color bold">- </span> : ''}
               {text[language].projectManager}
             </li>
-            <SmallScreen>
+            <TabletAndBelow>
               {activeCategorie === 4
               && (
               <div className="competences__card-container--smallscreen">
@@ -100,7 +107,7 @@ function Competences({ language }) {
                 <Card label="Git / Github" />
               </div>
               )}
-            </SmallScreen>
+            </TabletAndBelow>
           </ul>
         </div>
         <Desktop>

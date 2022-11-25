@@ -95,11 +95,10 @@
 
 #hello {
   display: inline-block;
-  max-width: 80vw;
   line-height: normal;
 
   &.startanimation {
-    animation: startAnimation 1s linear backwards 1.2s;
+    animation: startAnimation 1s ease-out backwards 1.2s;
 
     &::before {
       animation: underline .25s ease-out 1s forwards;
