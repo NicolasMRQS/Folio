@@ -14,7 +14,7 @@
         margin-top: 114px;
 
         @media (max-width: 1360px) {
-          margin-top: 64px;
+          margin-top: 80px;
         }
     }
 
@@ -28,6 +28,7 @@
 
         @media (max-width: 1360px) {
           font-size: 48px;
+          margin-top: 24px;
         }
     }
 
@@ -43,12 +44,13 @@
         @media (max-width: vars.$phone-breakpoint) {
           // width: 450px;
           margin: 48px auto 0;
+          gap: 24px;
         }
     }
 
     &__sayhi-button {
       @media (max-width: vars.$phone-breakpoint) {
-        margin: 0 calc(50% - 150px);
+        margin: 0 calc(50% - 140px);
       }
     }
 

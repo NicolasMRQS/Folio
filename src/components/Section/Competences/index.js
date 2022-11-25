@@ -19,12 +19,12 @@ function Competences({ language }) {
   }
 
   function SmallScreen({ children }) {
-    const isSmallScreen = useMediaQuery({ maxWidth: 1024 });
+    const isSmallScreen = useMediaQuery({ maxWidth: 1023 });
     return isSmallScreen ? children : null;
   }
 
   return (
-    <Section id="competences" height={SmallScreen ? '700px' : ''}>
+    <Section id="competences" height={SmallScreen ? '700px' : null}>
       <div className="competences__contents-container">
         <div className="competences__text-container">
           <h2 className="section_title">
