@@ -95,6 +95,8 @@
 
 #hello {
   display: inline-block;
+  max-width: 80vw;
+  line-height: normal;
 
   &.startanimation {
     animation: startAnimation 1s linear backwards 1.2s;

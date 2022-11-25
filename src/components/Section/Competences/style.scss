@@ -23,12 +23,26 @@
     width: 440px;
     min-width: 350px;
     padding-top: 141px;
+
+    @media (max-width: vars.$tablet-breakpoint) {
+     width: 100%;
+    }
+
+    @media (max-width: vars.$phone-breakpoint) {
+      padding-top: 80px;
+     }
   }
 
   &__list-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-top: 48px;
+
+    @media (max-width: vars.$phone-breakpoint) {
+      gap: 32px;
+      margin-top: 32px;
+     }
   }
 
   &__list {
@@ -46,6 +60,14 @@
       text-shadow: 0 0 18px adjust-color(vars.$base-color, $lightness: +40%);
       animation: shake 0.8s infinite ease-in-out;
     }
+  }
+
+  &__card-container--smallscreen {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 }
 

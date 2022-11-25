@@ -1,3 +1,5 @@
+@use '/src/styles/vars';
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -45,7 +47,7 @@
 @keyframes slideinEllipse {
   from {
     transform: rotate(37.39deg);;
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
@@ -56,9 +58,15 @@
 
 @keyframes startAnimation {
     from {
-        transform: translateX(50vw) scale(8);
+        transform: translateX(50vw);
+        font-size: 70px;
+
+        @media (max-width: vars.$tablet-breakpoint) {
+          transform: translateX(30vw);
+          }
     }
     to {
-        transform: translateX(0) scale(1);
+        transform: translateX(0);
+        font-size: 16px;
     }
 }

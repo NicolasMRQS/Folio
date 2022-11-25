@@ -36,6 +36,7 @@ function CardContainer({ activeCategorie, language }) {
       </div>
       <div className="card-container__cards-list">
         <Card label="NodeJS" logo="nodejs" />
+        <Card label="Express" />
         <Card label="SQL" logo="sql" />
         <Card label="PostgreSQL" logo="postgresql" />
         <Card label="EJS" logo="ejs" />

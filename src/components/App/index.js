@@ -20,18 +20,18 @@ function App() {
     <ParallaxProvider>
       <Router>
         <main className="app">
-          <HelloAnimation
+          {/* <HelloAnimation
             helloAnimation={helloAnimation}
             setHelloAnimation={setHelloAnimation}
             language={language}
-          >
+          > */}
             <LanguageChooser language={language} setLanguage={setLanguage} />
             <Nav />
             <Description language={language} />
             <Competences language={language} />
             <Projects language={language} />
             <Contact language={language} />
-          </HelloAnimation>
+          {/* </HelloAnimation> */}
         </main>
       </Router>
     </ParallaxProvider>

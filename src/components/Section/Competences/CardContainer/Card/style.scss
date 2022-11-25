@@ -12,10 +12,21 @@
   gap: 12px;
   transition: 0.2s ease-out;
 
+  @media (max-width: vars.$phone-breakpoint) {
+    height: auto;
+    padding: 12px;
+    line-height: 1.2;
+  }
+
   &_img {
     width: 28px;
     height: 28px;
     object-fit: contain;
+
+    @media (max-width: vars.$phone-breakpoint) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &:hover {
