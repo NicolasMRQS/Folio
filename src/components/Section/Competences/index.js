@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive';
 import { PropTypes } from 'prop-types';
@@ -87,7 +87,8 @@ function Competences({ language }) {
                 <Card label="Express" />
                 <Card label="SQL" logo="sql" />
                 <Card label="PostgreSQL" logo="postgresql" />
-                <Card label="EJS" logo="ejs" />
+                <Card label={text[language].mvc} logo="ejs" />
+                <Card label={text[language].api} />
                 <Card label="Sequelize" logo="sequelize" />
                 <Card label="Strapi" logo="strapi" />
               </div>
