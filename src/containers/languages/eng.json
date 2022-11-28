@@ -11,6 +11,8 @@
     "backend": "Backend Development",
     "projectManager": "Digital project management",
 
+    "mvc": "MVC model (EJS)",
+    "api": "REST / CRUD API",
     "cdc": "Drafting of specifications",
     "agile": "SCRUM Method",
 

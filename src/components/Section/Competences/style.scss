@@ -72,19 +72,9 @@
     max-height: 1000px;
     transition: max-height 1s ease-in-out;
 
-    // & > .card {
-    //   transform: translateY(0);
-    //   transition: transform 0.6s ease-in-out;
-    // }
-
     &.closed {
       max-height: 0;
-      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1.02);
-
-      // & > .card {
-      //   transform: translateY(-300px);
-      //   transition: transform 0.5s linear;
-      // }
+      transition: max-height 0.5s cubic-bezier(0, 0.9, 0, 1.02);
     }
 
     @media (max-width: vars.$tablet-breakpoint) {
@@ -105,7 +95,7 @@
   transform: rotate(118.47deg);
   transition: transform 0.3s ease-in;
 
-  @media (max-width: vars.$phone-breakpoint) {
+  @media (max-width: vars.$tablet-breakpoint) {
     top: 150px;
     left: auto;
     right: 20%;

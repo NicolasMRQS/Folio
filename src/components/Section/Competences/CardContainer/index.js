@@ -8,12 +8,21 @@ import './style.scss';
 function CardContainer({ activeCategorie, language }) {
   const listRef = useRef(null);
 
+  // Scroll to categorie on click
   useEffect(() => {
     listRef.current.scrollTo({
       top: 405 * (activeCategorie - 1),
       behavior: 'smooth',
     });
   }, [activeCategorie]);
+
+  // Init scroll to good categorie
+  useEffect(() => {
+    listRef.current.scrollTo({
+      top: 405 * (activeCategorie - 1),
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <div className="card-container" ref={listRef}>
@@ -39,7 +48,8 @@ function CardContainer({ activeCategorie, language }) {
         <Card label="Express" />
         <Card label="SQL" logo="sql" />
         <Card label="PostgreSQL" logo="postgresql" />
-        <Card label="EJS" logo="ejs" />
+        <Card label={text[language].mvc} logo="ejs" />
+        <Card label={text[language].api} />
         <Card label="Sequelize" logo="sequelize" />
         <Card label="Strapi" logo="strapi" />
       </div>
@@ -49,7 +59,7 @@ function CardContainer({ activeCategorie, language }) {
         <Card label="Wireframes" />
         <Card label="User stories" />
         <Card label="MCD" />
-        <Card label="Git / Github" />
+        <Card label="Git / Github" logo="github" />
       </div>
     </div>
   );
