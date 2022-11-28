@@ -70,3 +70,16 @@
         font-size: 16px;
     }
 }
+
+@media (max-width: 880px) {
+  @keyframes startAnimation {
+    from {
+        transform: translateX(10vw);
+        font-size: 60px;
+    }
+    to {
+        transform: translateX(0);
+        font-size: 16px;
+    }
+  }
+}

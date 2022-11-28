@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive';
 import { PropTypes } from 'prop-types';
@@ -12,33 +12,46 @@ import Card from './CardContainer/Card';
 
 function Competences({ language }) {
   const [activeCategorie, setActiveCategorie] = useState(1);
+  const [changingCategorie, setChangingCategorie] = useState(false);
 
-  function Desktop({ children }) {
-    const isDesktop = useMediaQuery({ minWidth: 1024 });
-    return isDesktop ? children : null;
-  }
+  const isMobile = useMediaQuery({ maxWidth: 766 });
+  const isTablet = useMediaQuery({ maxWidth: 1024 });
 
-  function SmallScreen({ children }) {
-    const isSmallScreen = useMediaQuery({ maxWidth: 1023 });
-    return isSmallScreen ? children : null;
-  }
+  const handleClick = (event) => {
+    const categorieClicked = parseInt(event.target.getAttribute('data-categorie'), 10);
+    if (isTablet && activeCategorie !== categorieClicked) {
+      setChangingCategorie(true);
+      setTimeout(() => {
+        setActiveCategorie(categorieClicked);
+        setTimeout(() => {
+          setChangingCategorie(false);
+        }, 1);
+      }, 400);
+    }
+    else {
+      setActiveCategorie(categorieClicked);
+    }
+  };
 
   return (
-    <Section id="competences" height={SmallScreen ? '700px' : null}>
+    // eslint-disable-next-line no-nested-ternary
+    <Section id="competences" height={isMobile ? '700px' : isTablet ? '880px' : ''}>
+      <Parallax translateY={['-1100px', '-500px']}>
+        <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
+      </Parallax>
       <div className="competences__contents-container">
         <div className="competences__text-container">
           <h2 className="section_title">
             {text[language].competencesTitle}
           </h2>
           <ul className="competences__list-container">
-            <li className={activeCategorie === 1 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(1)}>
+            <li className={activeCategorie === 1 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="1">
               {activeCategorie === 1 ? <span className="second-color bold">- </span> : ''}
               {text[language].frontend}
             </li>
-            <SmallScreen>
-              {activeCategorie === 1
+            {activeCategorie === 1
               && (
-              <div className="competences__card-container--smallscreen">
+              <div className={changingCategorie ? 'competences__card-container--smallscreen closed' : 'competences__card-container--smallscreen'}>
                 <Card label="Javascript" logo="javascript" />
                 <Card label="React" logo="react" />
                 <Card label="Redux" logo="redux" />
@@ -50,30 +63,26 @@ function Competences({ language }) {
                 <Card label="Webpack" logo="webpack" />
               </div>
               )}
-            </SmallScreen>
-            <li className={activeCategorie === 2 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(2)}>
+            <li className={activeCategorie === 2 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="2">
               {activeCategorie === 2 ? <span className="second-color bold">- </span> : ''}
               {text[language].integration}
             </li>
-            <SmallScreen>
-              {activeCategorie === 2
+            {activeCategorie === 2
               && (
-              <div className="competences__card-container--smallscreen">
+              <div className={changingCategorie ? 'competences__card-container--smallscreen closed' : 'competences__card-container--smallscreen'}>
                 <Card label="HTML5" logo="html5" />
                 <Card label="CSS3" logo="css3" />
                 <Card label="Javascript" logo="javascript" />
                 <Card label="Bulma" logo="bulma" />
               </div>
               )}
-            </SmallScreen>
-            <li className={activeCategorie === 3 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(3)}>
+            <li className={activeCategorie === 3 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="3">
               {activeCategorie === 3 ? <span className="second-color bold">- </span> : ''}
               {text[language].backend}
             </li>
-            <SmallScreen>
-              {activeCategorie === 3
+            {activeCategorie === 3
               && (
-              <div className="competences__card-container--smallscreen">
+              <div className={changingCategorie ? 'competences__card-container--smallscreen closed' : 'competences__card-container--smallscreen'}>
                 <Card label="NodeJS" logo="nodejs" />
                 <Card label="Express" />
                 <Card label="SQL" logo="sql" />
@@ -83,33 +92,25 @@ function Competences({ language }) {
                 <Card label="Strapi" logo="strapi" />
               </div>
               )}
-            </SmallScreen>
-            <li className={activeCategorie === 4 ? 'competences__list--active' : 'competences__list'} onClick={() => setActiveCategorie(4)}>
+            <li className={activeCategorie === 4 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="4">
               {activeCategorie === 4 ? <span className="second-color bold">- </span> : ''}
               {text[language].projectManager}
             </li>
-            <SmallScreen>
-              {activeCategorie === 4
+            {activeCategorie === 4
               && (
-              <div className="competences__card-container--smallscreen">
+              <div className={changingCategorie ? 'competences__card-container--smallscreen closed' : 'competences__card-container--smallscreen'}>
                 <Card label={text[language].cdc} />
                 <Card label={text[language].agile} />
                 <Card label="Wireframes" />
                 <Card label="User stories" />
                 <Card label="MCD" />
-                <Card label="Git / Github" />
+                <Card label="Git / Github" logo="github" />
               </div>
               )}
-            </SmallScreen>
           </ul>
         </div>
-        <Desktop>
-          <CardContainer activeCategorie={activeCategorie} language={language} />
-        </Desktop>
+        <CardContainer activeCategorie={activeCategorie} language={language} />
       </div>
-      <Parallax translateY={['-1000px', '-500px']}>
-        <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
-      </Parallax>
     </Section>
   );
 }

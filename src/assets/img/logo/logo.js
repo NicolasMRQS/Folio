@@ -3,6 +3,7 @@ import babel from './babel.png';
 import bulma from './bulma.png';
 import css3 from './css3.png';
 import ejs from './ejs.png';
+import github from './github.png';
 import html5 from './html5.png';
 import javascript from './javascript.png';
 import jsx from './jsx.png';
@@ -23,6 +24,7 @@ export default {
   bulma,
   css3,
   ejs,
+  github,
   html5,
   javascript,
   jsx,

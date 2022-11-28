@@ -1,18 +1,22 @@
 {
-    "iam" : "I am",
-    "description" : "Former audiovisual technician, I attended an intensive training to be a web developer specialized in React. Motivated, curious and passionate about coding, my ease of learning allows me to adapt easily to new environments.",
-    "job" : "I am currently looking for my first job.",
-    "cvButton" : "My CV",
+    "iam": "I am",
+    "description": "Former audiovisual technician, I attended an intensive training to be a web developer specialized in React. Motivated, curious and passionate about coding, my ease of learning allows me to adapt easily to new environments.",
+    "job": "I am currently looking for my first job.",
+    "hiButton": "Say hi!",
+    "cvButton": "My CV",
 
-    "competencesTitle" : "Skills",
-    "frontend" : "Frontend Development",
-    "integration" : "Web Integration",
-    "backend" : "Backend Development",
-    "projectManager" : "Digital project management",
+    "competencesTitle": "Skills",
+    "frontend": "Frontend Development",
+    "integration": "Web Integration",
+    "backend": "Backend Development",
+    "projectManager": "Digital project management",
 
-    "cdc" : "Drafting of specifications",
-    "agile" : "Agile Method",
+    "cdc": "Drafting of specifications",
+    "agile": "SCRUM Method",
 
-    "projectsTitle" : "Projects",
-    "projectsText" : "My last projects"
+    "projectsTitle": "Projects",
+    "projectsText": "My last projects",
+
+    "next": "What's next ?",
+    "contact": "Get in touch"
 }

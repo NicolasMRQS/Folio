@@ -1,18 +1,22 @@
 {
-    "iam" : "Je suis",
-    "description" : "Ancien technicien audiovisuel, j'ai suivi une formation intensive pour devenir développeur web spécialisé en React. Motivé, curieux et passionné par le code, ma facilité d'apprentissage me permet de m'adapter facilement aux nouveaux environnements.",
-    "job" : "Je suis actuellement à la recherche de mon premier poste.",
-    "cvButton" : "Mon CV",
+    "iam": "Je suis",
+    "description": "Ancien technicien audiovisuel, j'ai suivi une formation intensive pour devenir développeur web spécialisé en React. Motivé, curieux et passionné par le code, ma facilité d'apprentissage me permet de m'adapter facilement aux nouveaux environnements.",
+    "job": "Je suis actuellement à la recherche de mon futur poste.",
+    "hiButton": "Prenons contact !",
+    "cvButton": "Mon CV",
 
-    "competencesTitle" : "Compétences",
-    "frontend" : "Développement Frontend",
-    "integration" : "Intégration Web",
-    "backend" : "Développement Backend",
-    "projectManager" : "Gestion de projets numériques",
+    "competencesTitle": "Compétences",
+    "frontend": "Développement Frontend",
+    "integration": "Intégration Web",
+    "backend": "Développement Backend",
+    "projectManager": "Gestion de projets numériques",
 
-    "cdc" : "Rédaction du cahier des charges",
-    "agile" : "Méthode agile",
+    "cdc": "Rédaction du cahier des charges",
+    "agile": "Méthode SCRUM",
 
-    "projectsTitle" : "Projets",
-    "projectsText" : "Mes derniers projets"
+    "projectsTitle": "Projets",
+    "projectsText": "Mes derniers projets",
+
+    "next": "Et la suite ?",
+    "contact": "Gardons contact !"
 }
