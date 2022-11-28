@@ -16,14 +16,6 @@ function CardContainer({ activeCategorie, language }) {
     });
   }, [activeCategorie]);
 
-  // Init scroll to good categorie
-  useEffect(() => {
-    listRef.current.scrollTo({
-      top: 405 * (activeCategorie - 1),
-      behavior: 'smooth',
-    });
-  }, []);
-
   return (
     <div className="card-container" ref={listRef}>
       <div className="card-container__cards-list">
