@@ -1,6 +1,7 @@
 @use '/src/styles/vars';
 
 .project-card {
+  position: relative;
   width: 450px;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,7 @@
     transition: all 0.3s;
     object-position: 0 50%;
     aspect-ratio: 1 / 1;
+    overflow: hidden;
 
     @media (max-width: vars.$phone-breakpoint) {
       width: 343px;
@@ -45,7 +47,28 @@
   &__label {
     font-size: 24px;
     font-family: 'Gilroy-Bold', sans-serif;
-    color: vars.$black-color;
+    color: vars.$white-color;
+    text-align: center;
+    // background-color: fade-out(vars.$base-color, 0.5);
+    background-color: rgba(5, 5, 5, 0.7);
+    padding: 8px 0;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+  }
+
+  &__info-container {
+    display: flex;
+  }
+
+  &__info {
+    width: 50%;
+    padding: 0 8px;
+  }
+
+  &__border {
+    width: 4px;
+    background-color: vars.$base-color;
   }
 
   &:nth-child(even) {

@@ -4,11 +4,28 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 import projectsData from '../../../../assets/img/projects/project';
 import './style.scss';
 
-function ProjectCard({ label, img, url }) {
+function ProjectCard({
+  label, img, url, description, techno,
+}) {
   return (
     <a href={url} target="_blank" rel="noreferrer" className="project-card">
-      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]} />
-      <span className="project-card__label">{label}</span>
+      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]}>
+        <div className="project-card__label">{label}</div>
+      </ParallaxBanner>
+      <div className="project-card__info-container">
+        <div className="project-card__info base_color bold">
+          {description}
+        </div>
+        {techno
+          && (
+          <>
+            <div className="project-card__border" />
+            <div className="project-card__info">
+              {techno}
+            </div>
+          </>
+          )}
+      </div>
     </a>
   );
 }
@@ -17,10 +34,14 @@ ProjectCard.propTypes = {
   label: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   url: PropTypes.string,
+  description: PropTypes.string,
+  techno: PropTypes.string,
 };
 
 ProjectCard.defaultProps = {
   url: null,
+  description: null,
+  techno: null,
 };
 
 export default ProjectCard;
