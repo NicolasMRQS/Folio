@@ -30,7 +30,7 @@ function Description({ language, helloAnimation }) {
           </p>
           <div className="description__button_container">
             <a href="mailto:nicolas08.10marques@gmail.com" hidden={helloAnimation}>
-              <Button label="Say Hi" color="base" full />
+              <Button label={text[language].hiButton} color="base" full />
             </a>
             <a href="/pdf/CV.pdf" download="CV.pdf" hidden={helloAnimation}>
               <Button label={text[language].cvButton} color="base" />

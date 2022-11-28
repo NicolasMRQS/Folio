@@ -26,7 +26,7 @@
   min-height: 100%;
 
   &__text-container {
-    width: 50%;
+    width: 52%;
     padding-top: 177px;
     padding-right: 20px;
   }
@@ -43,13 +43,14 @@
   &__button_container {
     margin-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     animation: slidein 0.5s ease-in;
   }
 
   &__img-container {
     position: relative;
-    width: 50%;
+    width: 48%;
   }
 
   &__text {

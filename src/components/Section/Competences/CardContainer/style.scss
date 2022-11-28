@@ -1,3 +1,5 @@
+@use '/src/styles/vars';
+
 .card-container {
   z-index: 1;
   margin: 180px 0px 0;
@@ -9,12 +11,16 @@
   align-items: center;
   gap: 80px;
 
+  @media (max-width: vars.$tablet-breakpoint) {
+    display: none;
+  }
+
     &__cards-list {
       max-width: 600px;
       min-width: 400px;
       min-height: 325px;
       max-height: 325px;
-      padding: 0 8px;
+      padding: 0 16px;
       display: flex;
       flex-wrap: wrap;
       align-content: center;

@@ -5,7 +5,7 @@ import './style.scss';
 function Section({ children, id, height }) {
   return (
     <section className="section" id={id} style={{ height: height }}>
-      <div className="content_container">
+      <div className="content_container" style={{ height: height }}>
         {children}
       </div>
     </section>
