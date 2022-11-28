@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 import Section from '..';
 import ProjectCard from './ProjectCard';
 
@@ -39,5 +41,9 @@ function Projects({ language }) {
     </Section>
   );
 }
+
+Projects.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default Projects;
