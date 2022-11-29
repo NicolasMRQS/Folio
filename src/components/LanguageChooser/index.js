@@ -25,7 +25,8 @@ function LanguageChooser({ language, setLanguage }) {
 }
 
 LanguageChooser.propTypes = {
-
+  language: PropTypes.string.isRequired,
+  setLanguage: PropTypes.func.isRequired,
 };
 
 export default LanguageChooser;

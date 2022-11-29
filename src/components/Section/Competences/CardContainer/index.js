@@ -4,6 +4,7 @@ import Card from './Card';
 
 import text from '../../../../containers/languages';
 import './style.scss';
+import { useMediaQuery } from 'react-responsive';
 
 function CardContainer({ activeCategorie, language }) {
   const listRef = useRef(null);
@@ -16,13 +17,15 @@ function CardContainer({ activeCategorie, language }) {
     });
   }, [activeCategorie]);
 
-  // Init scroll to good categorie
+  // Scroll to categorie on viewport size changing
+
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
+
   useEffect(() => {
     listRef.current.scrollTo({
       top: 405 * (activeCategorie - 1),
-      behavior: 'smooth',
     });
-  }, []);
+  }, [isDesktop]);
 
   return (
     <div className="card-container" ref={listRef}>
@@ -48,10 +51,10 @@ function CardContainer({ activeCategorie, language }) {
         <Card label="Express" />
         <Card label="SQL" logo="sql" />
         <Card label="PostgreSQL" logo="postgresql" />
+        <Card label="Strapi" logo="strapi" />
         <Card label={text[language].mvc} logo="ejs" />
         <Card label={text[language].api} />
         <Card label="Sequelize" logo="sequelize" />
-        <Card label="Strapi" logo="strapi" />
       </div>
       <div className="card-container__cards-list">
         <Card label={text[language].cdc} />

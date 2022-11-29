@@ -7,7 +7,7 @@ import Section from '..';
 
 import './style.scss';
 import text from '../../../containers/languages';
-import profil from '../../../assets/img/profil.png';
+import profil from '../../../assets/img/Nico.png';
 import glassesImg from '../../../assets/img/glasses3.png';
 
 function Description({ language, helloAnimation }) {

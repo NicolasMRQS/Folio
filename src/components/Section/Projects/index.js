@@ -1,3 +1,5 @@
+import { PropTypes } from 'prop-types';
+
 import Section from '..';
 import ProjectCard from './ProjectCard';
 
@@ -16,12 +18,32 @@ function Projects({ language }) {
         </p>
       </div>
       <div className="projects__projects-container">
-        <ProjectCard label="Zen Gardener" img="zengardener" url="https://zen-gardener.netlify.app/" />
-        <ProjectCard label="Le Hic de Basil" img="hicdebasil" url="https://lehicdebasil.com/" />
-        <ProjectCard label="Pokémon Quizz (Work in progress...)" img="pokemon" />
+        <ProjectCard
+          label="Zen Gardener"
+          img="zengardener"
+          url="https://zen-gardener.netlify.app/"
+          description={text[language].zengardenerDesc}
+          techno={text[language].zengardenerTechno}
+        />
+        <ProjectCard
+          label="Le Hic de Basil"
+          img="hicdebasil"
+          url="https://lehicdebasil.com/"
+          description={text[language].hicdebasilDesc}
+          techno={text[language].hicdebasilTechno}
+        />
+        <ProjectCard
+          label="Pokémon Quizz"
+          img="pokemon"
+          description={text[language].pokemonDesc}
+        />
       </div>
     </Section>
   );
 }
+
+Projects.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default Projects;

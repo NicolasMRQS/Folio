@@ -19,6 +19,12 @@
     "projectsTitle": "Projects",
     "projectsText": "My last projects",
 
+    "zengardener-desc": "Student group project - O'Clock",
+    "zengardener-techno": "React, Redux, Sass, Axios, NodeJS, Express, pgSQL, JWT...",
+    "hicdebasil-desc": "Project before training",
+    "hicdebasil-techno": "Squarespace",
+    "pokemon-desc": "WIP...",
+
     "next": "What's next ?",
     "contact": "Get in touch"
 }

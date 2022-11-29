@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { useMediaQuery } from 'react-responsive';
 import { PropTypes } from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
 import Section from '..';
 import CardContainer from './CardContainer';
+import Card from './CardContainer/Card';
 
 import text from '../../../containers/languages';
 import './style.scss';
-import Card from './CardContainer/Card';
 
 function Competences({ language }) {
   const [activeCategorie, setActiveCategorie] = useState(1);

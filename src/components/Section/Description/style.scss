@@ -6,7 +6,7 @@
     bottom: 700px;
   }
   to {
-    bottom: 267px;
+    bottom: 272px;
   }
 }
 
@@ -67,17 +67,25 @@
 .nicolas-img {
   position: absolute;
   z-index: 1;
+  width: 450px;
   bottom: -180px;
   right: 0;
   cursor: pointer;
+  filter: drop-shadow(0 0 2px #222);
   animation: slidein 0.5s ease-in;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 4px #222);
+    transition: filter 0.3s ease;
+  }
 }
 
 .glasses-img {
   cursor: pointer;
-  width: 140px;
+  width: 141px;
   position: absolute;
-  right: 142px;
+  right: 157px;
   z-index: 2;
   animation: fall 1s linear forwards;
 }
