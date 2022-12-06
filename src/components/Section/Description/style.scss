@@ -94,6 +94,16 @@
   right: 157px;
   z-index: 2;
   animation: fall 1s linear forwards;
+
+  &.hidden {
+    display: none;
+    animation: none;
+  }
+
+  &.fadeout {
+    opacity: 0;
+    transition: opacity 1s linear;
+  }
 }
 
 .description_ellipse {

@@ -1,5 +1,5 @@
-import zengardener from './zengardener.png';
-import hicdebasil from './hicdebasil.png';
+import zengardener from './zengardener.jpg';
+import hicdebasil from './hicdebasil.jpg';
 import pokemon from './pokemon.png';
 
 export default {

@@ -26,7 +26,7 @@ function Competences({ language }) {
         setTimeout(() => {
           setChangingCategorie(false);
         }, 1);
-      }, 400);
+      }, 450);
     }
     else {
       setActiveCategorie(categorieClicked);
