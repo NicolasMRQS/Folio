@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
+
 import Card from './Card';
 
 import text from '../../../../containers/languages';
 import './style.scss';
-import { useMediaQuery } from 'react-responsive';
 
 function CardContainer({ activeCategorie, language }) {
   const listRef = useRef(null);

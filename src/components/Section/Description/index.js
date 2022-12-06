@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import PropTypes from 'prop-types';
 
@@ -12,6 +12,28 @@ import glassesImg from '../../../assets/img/glasses3.png';
 
 function Description({ language, helloAnimation }) {
   const [glasses, setGlasses] = useState(false);
+  const [glassesAnimation, setGlassesAnimation] = useState(false);
+
+  const glassesImgElm = useRef(null);
+
+  const handleClick = () => {
+    if (!glassesAnimation && !glasses) {
+      setGlassesAnimation(true);
+      setGlasses(true);
+      glassesImgElm.current.classList.remove('hidden');
+      setTimeout(() => setGlassesAnimation(false), 1005);
+    }
+    if (!glassesAnimation && glasses) {
+      setGlassesAnimation(true);
+      glassesImgElm.current.classList.add('fadeout');
+      setTimeout(() => {
+        glassesImgElm.current.classList.add('hidden');
+        glassesImgElm.current.classList.remove('fadeout');
+        setGlassesAnimation(false);
+      }, 1005);
+      setGlasses(false);
+    }
+  };
 
   return (
     <Section id="description" height={helloAnimation && '101vh'}>
@@ -38,8 +60,8 @@ function Description({ language, helloAnimation }) {
           </div>
         </div>
         <div className="description__img-container" hidden={helloAnimation}>
-          <img onClick={() => setGlasses(!glasses)} src={profil} alt="Nicolas Marques" className="nicolas-img" />
-          {glasses ? <img onClick={() => setGlasses(!glasses)} src={glassesImg} alt="glasses" className="glasses-img" /> : ''}
+          <img onClick={handleClick} src={profil} alt="Nicolas Marques" className="nicolas-img" />
+          <img ref={glassesImgElm} onClick={handleClick} src={glassesImg} alt="glasses" className="glasses-img hidden" />
         </div>
         <Parallax translateY={['-400px', '300px']}>
           <div className="description_ellipse" hidden={helloAnimation} />
