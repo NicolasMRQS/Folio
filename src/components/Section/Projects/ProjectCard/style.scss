@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 24px;
   margin-top: -205px;
-  overflow: hidden;
+  // overflow: hidden;
   cursor: pointer;
   transition: all 0.3s linear;
 
@@ -15,17 +15,14 @@
     width: 343px;
   }
 
-  &:hover {
-    filter: grayscale(80%);
-  }
-
   &:hover .project-card__img{
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0.3s ease-out;
   }
 
-  &:hover .project-card__label{
-    text-decoration: underline;
+  &:hover .project-card__info-container {
+    transform: translate(7px, -7px);
+    transition: transform 0.3s ease-out;
   }
 
   &__img {
@@ -37,6 +34,7 @@
     object-position: 0 50%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
+    transition: all 0.3s ease-out;
 
     @media (max-width: vars.$phone-breakpoint) {
       width: 343px;
@@ -44,31 +42,20 @@
     }
   }
 
+  &__info-container {
+    line-height: normal;
+    width: 100%;
+    transition: transform 0.3s ease-out;
+  }
+
   &__label {
     font-size: 24px;
     font-family: 'Gilroy-Bold', sans-serif;
-    color: vars.$white-color;
-    text-align: center;
-    // background-color: fade-out(vars.$base-color, 0.5);
-    background-color: rgba(5, 5, 5, 0.7);
-    padding: 8px 0;
-    position: absolute;
-    top: 85%;
-    width: 100%;
+    margin: 16px 0;
   }
 
-  &__info-container {
-    display: flex;
-  }
-
-  &__info {
-    width: 50%;
-    padding: 0 8px;
-  }
-
-  &__border {
-    width: 4px;
-    background-color: vars.$base-color;
+  &__technos {
+    font-size: 12px;
   }
 
   &:nth-child(even) {

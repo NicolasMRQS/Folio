@@ -17,14 +17,14 @@
     "agile": "Méthode SCRUM",
 
     "projectsTitle": "Projets",
-    "projectsText": "Mes derniers projets",
+    "projectsText": "Mes dernières réalisations",
 
-    "zengardenerDesc": "Projet étudiant en groupe - Formation O'Clock",
+    "zengardenerDesc": "Formation O'Clock - Projet étudiant en groupe",
     "zengardenerTechno": "React, Redux, Sass, Axios, NodeJS, Express, pgSQL, JWT...",
-    "hicdebasilDesc": "Projet avant-formation",
-    "hicdebasilTechno": "Squarespace",
-    "pokemonDesc": "WIP...",
+    "hicdebasilDesc": "Freelance",
+    "hicdebasilTechno": "HTML / CSS, Squarespace",
+    "pokemonDesc": "Work in progress...",
 
     "next": "Et la suite ?",
-    "contact": "Gardons contact !"
+    "contact": "Gardons contact\u00a0!"
 }

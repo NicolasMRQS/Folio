@@ -9,22 +9,17 @@ function ProjectCard({
 }) {
   return (
     <a href={url} target="_blank" rel="noreferrer" className="project-card">
-      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]}>
-        <div className="project-card__label">{label}</div>
-      </ParallaxBanner>
+      <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]} />
       <div className="project-card__info-container">
-        <div className="project-card__info base_color bold">
+        <div className="project-card__info black_color">
           {description}
         </div>
-        {techno
-          && (
-          <>
-            <div className="project-card__border" />
-            <div className="project-card__info">
-              {techno}
-            </div>
-          </>
-          )}
+        <div className="project-card__label black_color">
+          {label}
+        </div>
+        <div className="project-card__technos">
+          {techno}
+        </div>
       </div>
     </a>
   );
