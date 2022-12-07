@@ -1,0 +1,33 @@
+@use '/src/styles/vars';
+
+@keyframes breathe {
+    from {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.cursor-dot {
+    position: fixed;
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    background-color: orangered;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    animation: breathe 4s linear infinite;
+}

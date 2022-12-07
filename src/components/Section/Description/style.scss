@@ -94,8 +94,8 @@
   }
 
   &.fadeout {
-    opacity: 0;
-    transition: opacity 1s linear;
+    transform: translate(40vw, -200px) rotate(800deg);
+    transition: transform .7s linear;
   }
 }
 

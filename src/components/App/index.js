@@ -11,6 +11,7 @@ import Projects from '../Section/Projects';
 import './style.scss';
 import LanguageChooser from '../LanguageChooser';
 import HelloAnimation from '../HelloAnimation';
+import Cursor from '../Cursor';
 
 function App() {
   const [language, setLanguage] = useState('fre');
@@ -20,6 +21,7 @@ function App() {
     <ParallaxProvider>
       <Router>
         <main className="app">
+          <Cursor />
           <HelloAnimation
             helloAnimation={helloAnimation}
             setHelloAnimation={setHelloAnimation}

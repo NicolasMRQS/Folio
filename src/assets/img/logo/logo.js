@@ -6,7 +6,6 @@ import ejs from './ejs.png';
 import github from './github.png';
 import html5 from './html5.png';
 import javascript from './javascript.png';
-import jsx from './jsx.png';
 import nodejs from './nodejs.png';
 import postgresql from './postgresql.png';
 import react from './react.png';
@@ -16,6 +15,7 @@ import sequelize from './sequelize.png';
 import socketio from './socketio.png';
 import sql from './sql.png';
 import strapi from './strapi.png';
+import tailwind from './tailwind.png';
 import webpack from './webpack.png';
 
 export default {
@@ -27,7 +27,6 @@ export default {
   github,
   html5,
   javascript,
-  jsx,
   nodejs,
   postgresql,
   react,
@@ -37,5 +36,6 @@ export default {
   socketio,
   sql,
   strapi,
+  tailwind,
   webpack,
 };

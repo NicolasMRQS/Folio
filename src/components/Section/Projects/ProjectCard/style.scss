@@ -7,7 +7,6 @@
   flex-direction: column;
   gap: 24px;
   margin-top: -205px;
-  // overflow: hidden;
   cursor: pointer;
   transition: all 0.3s linear;
 
@@ -15,9 +14,17 @@
     width: 343px;
   }
 
-  &:hover .project-card__img{
+  &:hover .project-card__img {
     border-radius: 50%;
     transition: all 0.3s ease-out;
+    transform: translate(-7px, 7px);
+    box-shadow: 5px -5px 10px 0 darken(vars.$base-color, 8%);
+  }
+
+  &:hover .project-card__circle {
+    transform: scale(1.02) rotate(25deg) translate(7px, -7px);
+    opacity: 1;
+    transition: transform 0.4s ease-out;
   }
 
   &:hover .project-card__info-container {
@@ -35,11 +42,25 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     transition: all 0.3s ease-out;
+    z-index: 2;
 
     @media (max-width: vars.$phone-breakpoint) {
       width: 343px;
       height: 343px;
     }
+  }
+
+  &__circle {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.95) rotate(-150deg);
+    transition: all 0.2s ease-out;
+    background: radial-gradient(90.14% 100% at 50% 0%, vars.$base-color 0%, rgba(45, 0, 102, 0) 100%);
   }
 
   &__info-container {

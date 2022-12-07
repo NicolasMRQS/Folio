@@ -37,7 +37,6 @@ function CardContainer({ activeCategorie, language }) {
         <Card label="Axios" logo="axios" />
         <Card label="SASS" logo="sass" />
         <Card label="SocketIO" logo="socketio" />
-        <Card label="JSX" logo="jsx" />
         <Card label="Babel" logo="babel" />
         <Card label="Webpack" logo="webpack" />
       </div>
@@ -46,6 +45,7 @@ function CardContainer({ activeCategorie, language }) {
         <Card label="CSS3" logo="css3" />
         <Card label="Javascript" logo="javascript" />
         <Card label="Bulma" logo="bulma" />
+        <Card label="Tailwind" logo="tailwind" />
       </div>
       <div className="card-container__cards-list">
         <Card label="NodeJS" logo="nodejs" />
