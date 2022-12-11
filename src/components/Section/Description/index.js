@@ -30,7 +30,7 @@ function Description({ language, helloAnimation }) {
         glassesImgElm.current.classList.add('hidden');
         glassesImgElm.current.classList.remove('fadeout');
         setGlassesAnimation(false);
-      }, 1005);
+      }, 705);
       setGlasses(false);
     }
   };
@@ -39,11 +39,14 @@ function Description({ language, helloAnimation }) {
     <Section id="description" height={helloAnimation && '101vh'}>
       <div className="description">
         <div className="description__text-container">
-          <span id="hello" className={helloAnimation ? 'base_color bold startanimation' : 'base_color bold'}>Hello ! </span>
-          <span className="description__iam base_color bold" hidden={helloAnimation}>
-            {text[language].iam}
+          <span id="hello" className={helloAnimation ? 'base_color startanimation' : 'base_color'}>Hello ! </span>
+          <span className="description__iam base_color" hidden={helloAnimation}>
+          {text[language].iam} 
           </span>
-          <h1 className="description__title section_title" style={{ marginTop: '24px' }} hidden={helloAnimation}>Nicolas Marques</h1>
+          <span className="description__iam base_color bold" hidden={helloAnimation}>
+            Nicolas Marques
+          </span>
+          <h1 className="description__title section_title" style={{ marginTop: '24px' }} hidden={helloAnimation}>{text[language].developer}</h1>
           <p className="description__text" hidden={helloAnimation}>
             {text[language].description}
           </p>

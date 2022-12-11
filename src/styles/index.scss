@@ -5,10 +5,15 @@ body {
   font-family: 'Space Mono', monospace;
   font-size: 16px;
   line-height: 23.7px;
+  // cursor: none;
 }
 
 .base_color {
   color: vars.$base-color;
+}
+
+.black_color {
+  color: vars.$black-color;
 }
 
 .bold {

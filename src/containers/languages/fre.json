@@ -1,5 +1,6 @@
 {
     "iam": "Je suis",
+    "developer": "Développeur Frontend",
     "description": "Ancien technicien audiovisuel, j'ai suivi une formation intensive pour devenir développeur web spécialisé en React. Motivé, curieux et passionné par le code, ma facilité d'apprentissage me permet de m'adapter facilement aux nouveaux environnements.",
     "job": "Je suis actuellement à la recherche de mon futur poste.",
     "hiButton": "Me contacter !",
@@ -17,14 +18,14 @@
     "agile": "Méthode SCRUM",
 
     "projectsTitle": "Projets",
-    "projectsText": "Mes derniers projets",
+    "projectsText": "Mes dernières réalisations",
 
-    "zengardenerDesc": "Projet étudiant en groupe - Formation O'Clock",
+    "zengardenerDesc": "Formation O'Clock - Projet étudiant en groupe",
     "zengardenerTechno": "React, Redux, Sass, Axios, NodeJS, Express, pgSQL, JWT...",
-    "hicdebasilDesc": "Projet avant-formation",
-    "hicdebasilTechno": "Squarespace",
-    "pokemonDesc": "WIP...",
+    "hicdebasilDesc": "Freelance",
+    "hicdebasilTechno": "HTML / CSS, Squarespace",
+    "pokemonDesc": "Work in progress...",
 
     "next": "Et la suite ?",
-    "contact": "Gardons contact !"
+    "contact": "Gardons contact\u00a0!"
 }

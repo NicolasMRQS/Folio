@@ -36,7 +36,7 @@ function Competences({ language }) {
   return (
     // eslint-disable-next-line no-nested-ternary
     <Section id="competences" height={isMobile ? '700px' : isTablet ? '880px' : ''}>
-      <Parallax translateY={['-1100px', '-500px']}>
+      <Parallax translateY={['-920px', '-500px']}>
         <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
       </Parallax>
       <div className="competences__contents-container">
@@ -58,7 +58,6 @@ function Competences({ language }) {
                 <Card label="Axios" logo="axios" />
                 <Card label="SASS" logo="sass" />
                 <Card label="SocketIO" logo="socketio" />
-                <Card label="JSX" logo="jsx" />
                 <Card label="Babel" logo="babel" />
                 <Card label="Webpack" logo="webpack" />
               </div>
@@ -74,6 +73,7 @@ function Competences({ language }) {
                 <Card label="CSS3" logo="css3" />
                 <Card label="Javascript" logo="javascript" />
                 <Card label="Bulma" logo="bulma" />
+                <Card label="Tailwind" logo="tailwind" />
               </div>
               )}
             <li className={activeCategorie === 3 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="3">
