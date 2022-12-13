@@ -41,7 +41,7 @@ function Description({ language, helloAnimation }) {
         <div className="description__text-container">
           <span id="hello" className={helloAnimation ? 'base_color startanimation' : 'base_color'}>Hello ! </span>
           <span className="description__iam base_color" hidden={helloAnimation}>
-          {text[language].iam} 
+            {text[language].iam}
           </span>
           <span className="description__iam base_color bold" hidden={helloAnimation}>
             Nicolas Marques
