@@ -45,7 +45,7 @@ function Competences({ language }) {
             {text[language].competencesTitle}
           </h2>
           <ul className="competences__list-container">
-            <li className={activeCategorie === 1 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="1">
+            <li className={activeCategorie === 1 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="1">
               {activeCategorie === 1 ? <span className="second-color bold">- </span> : ''}
               {text[language].frontend}
             </li>
@@ -62,7 +62,7 @@ function Competences({ language }) {
                 <Card label="Webpack" logo="webpack" />
               </div>
               )}
-            <li className={activeCategorie === 2 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="2">
+            <li className={activeCategorie === 2 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="2">
               {activeCategorie === 2 ? <span className="second-color bold">- </span> : ''}
               {text[language].integration}
             </li>
@@ -76,7 +76,7 @@ function Competences({ language }) {
                 <Card label="Tailwind" logo="tailwind" />
               </div>
               )}
-            <li className={activeCategorie === 3 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="3">
+            <li className={activeCategorie === 3 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="3">
               {activeCategorie === 3 ? <span className="second-color bold">- </span> : ''}
               {text[language].backend}
             </li>
@@ -93,7 +93,7 @@ function Competences({ language }) {
                 <Card label="Strapi" logo="strapi" />
               </div>
               )}
-            <li className={activeCategorie === 4 ? 'competences__list--active' : 'competences__list'} onClick={handleClick} data-categorie="4">
+            <li className={activeCategorie === 4 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="4">
               {activeCategorie === 4 ? <span className="second-color bold">- </span> : ''}
               {text[language].projectManager}
             </li>
