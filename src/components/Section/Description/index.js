@@ -63,8 +63,8 @@ function Description({ language, helloAnimation }) {
           </div>
         </div>
         <div className="description__img-container" hidden={helloAnimation}>
-          <img onClick={handleClick} src={profil} alt="Nicolas Marques" className="nicolas-img" />
-          <img ref={glassesImgElm} onClick={handleClick} src={glassesImg} alt="glasses" className="glasses-img hidden" />
+          <img onClick={handleClick} src={profil} alt="Nicolas Marques" className="nicolas-img clickable" />
+          <img ref={glassesImgElm} onClick={handleClick} src={glassesImg} alt="glasses" className="glasses-img clickable hidden" />
         </div>
         <Parallax translateY={['-400px', '300px']}>
           <div className="description_ellipse" hidden={helloAnimation} />

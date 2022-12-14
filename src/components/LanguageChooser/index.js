@@ -16,7 +16,7 @@ function LanguageChooser({ language, setLanguage }) {
   };
 
   return (
-    <div className="language-chooser" onClick={handleClick}>
+    <div className="language-chooser clickable" onClick={handleClick}>
       <img className={language === 'fre' ? 'language-chooser__img--active' : 'language-chooser__img'} src={freFlag} alt="french" />
       <span>/</span>
       <img className={language === 'eng' ? 'language-chooser__img--active' : 'language-chooser__img'} src={engFlag} alt="english" />
