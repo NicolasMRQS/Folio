@@ -5,7 +5,7 @@
   width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 41px;
   margin-top: -205px;
   cursor: pointer;
   transition: all 0.3s linear;
@@ -55,6 +55,12 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
     transition: transform 0.3s ease-out;
+
+    @media (max-width: vars.$phone-breakpoint) {
+      width: 267px;
+      height: 267px;
+      top: 343px;
+    }
   }
 
   &__circle {
@@ -68,6 +74,11 @@
     transform: translate(-50%, -50%) scale(1) rotate(0);
     transition: all 0.3s ease-out;
     background: radial-gradient(90.14% 100% at 50% 0%, vars.$base-color 0%, rgba(45, 0, 102, 0) 100%);
+
+    @media (max-width: vars.$phone-breakpoint) {
+      width: 73px;
+      height: 73px;
+    }
   }
 
   &__info-container {
@@ -77,9 +88,9 @@
   }
 
   &__label {
-    font-size: 24px;
+    font-size: 32px;
     font-family: 'Gilroy-Bold', sans-serif;
-    margin: 16px 0;
+    margin: 12px 0;
   }
 
   &__technos {

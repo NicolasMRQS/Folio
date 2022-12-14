@@ -14,10 +14,10 @@ function ProjectCard({
         <div className="project-card__circle" />
       </div>
       <div className="project-card__info-container">
-        <div className="project-card__info black_color">
+        <div className="project-card__info base_color">
           {description}
         </div>
-        <div className="project-card__label black_color">
+        <div className="project-card__label section_title">
           {label}
         </div>
         <div className="project-card__technos">
