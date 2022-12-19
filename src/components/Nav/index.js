@@ -28,16 +28,16 @@ function Nav() {
   return (
     <nav className="nav-container">
       <HashLink title="Description" smooth elementId="description">
-        <div className={activeSection === 1 ? 'nav-link isactive' : 'nav-link'} />
+        <div className={activeSection === 1 ? 'nav-link clickable isactive' : 'nav-link clickable'} />
       </HashLink>
       <HashLink title="Compétences" smooth elementId="competences">
-        <div className={activeSection === 2 ? 'nav-link isactive' : 'nav-link'} />
+        <div className={activeSection === 2 ? 'nav-link clickable isactive' : 'nav-link clickable'} />
       </HashLink>
       <HashLink title="Projets" smooth elementId="projects">
-        <div className={activeSection === 3 ? 'nav-link isactive' : 'nav-link'} />
+        <div className={activeSection === 3 ? 'nav-link clickable isactive' : 'nav-link clickable'} />
       </HashLink>
       <HashLink title="Contact" smooth elementId="contact">
-        <div className={activeSection === 4 ? 'nav-link isactive' : 'nav-link'} />
+        <div className={activeSection === 4 ? 'nav-link clickable isactive' : 'nav-link clickable'} />
       </HashLink>
     </nav>
   );

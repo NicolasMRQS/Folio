@@ -1,4 +1,8 @@
 .app {
     position: relative;
     cursor: none;
+
+    &--defaultcursor {
+      cursor: default;
+    }
 }
