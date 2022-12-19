@@ -58,8 +58,14 @@
       font-size: 18px;
       font-weight: 700;
       text-shadow: 0 0 18px adjust-color(vars.$base-color, $lightness: +40%);
-      animation: shake 0.8s infinite ease;
     }
+  }
+
+  &__arrow {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 20px;
+    animation: shake 0.8s infinite ease;
   }
 
   &__card-container--smallscreen {

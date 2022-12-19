@@ -1,9 +1,9 @@
 @use '/src/styles/vars';
 
-.language-chooser {
+.cursor-chooser {
   z-index: 3;
   position: fixed;
-  top: 16px;
+  top: 64px;
   right: 1.5%;
   background-color: fade-out(vars.$white-color, 0.75);
   padding: 4px 8px;
@@ -12,13 +12,17 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: transform 0.05s ease-in;
   animation: slideinLanguage 0.5s ease-in;
 
   &:hover {
     transform: scale(1.1);
     transition: transform 0.05s ease-in;
+  }
+
+  &__checkbox {
+    cursor: pointer;
   }
 
   &__img {

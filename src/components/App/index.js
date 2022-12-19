@@ -11,28 +11,33 @@ import Projects from '../Section/Projects';
 import './style.scss';
 import LanguageChooser from '../LanguageChooser';
 import HelloAnimation from '../HelloAnimation';
-import Cursor from '../Cursor';
+import Cursor from '../CursorChooser/Cursor';
+import CursorChooser from '../CursorChooser';
 
 function App() {
   const [language, setLanguage] = useState('fre');
+  const [defaultCursor, setDefaultCursor] = useState(false);
   const [helloAnimation, setHelloAnimation] = useState(true);
 
   return (
     <ParallaxProvider>
       <Router>
-        <main className="app">
-          <Cursor />
+        <main className={defaultCursor ? 'app-defaultcursor' : 'app'}>
+          {defaultCursor ? '' : <Cursor />}
           <HelloAnimation
             helloAnimation={helloAnimation}
             setHelloAnimation={setHelloAnimation}
             language={language}
           >
             <LanguageChooser language={language} setLanguage={setLanguage} />
+            <CursorChooser defaultCursor={defaultCursor} setDefaultCursor={setDefaultCursor} />
             <Nav />
-            <Description language={language} />
-            <Competences language={language} />
-            <Projects language={language} />
-            <Contact language={language} />
+            <section>
+              <Description language={language} />
+              <Competences language={language} />
+              <Projects language={language} />
+              <Contact language={language} />
+            </section>
           </HelloAnimation>
         </main>
       </Router>

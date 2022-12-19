@@ -8,7 +8,7 @@ function ProjectCard({
   label, img, url, description, techno,
 }) {
   return (
-    <a href={url} target="_blank" rel="noreferrer" className="project-card">
+    <a href={url} target="_blank" rel="noreferrer" className="project-card clickable">
       <ParallaxBanner className="project-card__img" layers={[{ image: projectsData[img], speed: -15 }]} />
       <div className="project-card__circle-container">
         <div className="project-card__circle" />
