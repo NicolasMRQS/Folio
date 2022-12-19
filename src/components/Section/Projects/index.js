@@ -36,6 +36,7 @@ function Projects({ language }) {
           label="Pokémon Quizz"
           img="pokemon"
           description={text[language].pokemonDesc}
+          techno="React, Axios"
         />
       </div>
     </Section>

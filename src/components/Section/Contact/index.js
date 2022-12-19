@@ -27,7 +27,7 @@ function Contact({ language }) {
           <Button label="LinkedIn" color="white" />
         </a>
       </div>
-      <Parallax translateY={['-200px', '-570px']}>
+      <Parallax translateY={['-200px', '-650px']}>
         <div className="contact__ellipse" />
       </Parallax>
     </Section>
