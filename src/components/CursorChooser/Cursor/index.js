@@ -6,7 +6,7 @@ function Cursor() {
       color="259, 69, 0"
       innerSize={16}
       outerSize={16}
-      innerScale={0}
+      innerScale={0.6}
       outerScale={4}
       clickables={[
         'a',

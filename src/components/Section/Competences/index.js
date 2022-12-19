@@ -7,6 +7,7 @@ import Section from '..';
 import CardContainer from './CardContainer';
 import Card from './CardContainer/Card';
 
+import arrow from '../../../assets/img/arrow.svg';
 import text from '../../../containers/languages';
 import './style.scss';
 
@@ -36,7 +37,7 @@ function Competences({ language }) {
   return (
     // eslint-disable-next-line no-nested-ternary
     <Section id="competences" height={isMobile ? '700px' : isTablet ? '880px' : ''}>
-      <Parallax translateY={['-920px', '-500px']}>
+      <Parallax translateY={['-920px', '-450px']} rootMargin={{ top: 500, bottom: 500 }} style={{ zIndex: 1 }}>
         <div className="competences_ellipse" style={{ transform: `rotate(${118.47 + (30 * (activeCategorie - 1))}deg)` }} />
       </Parallax>
       <div className="competences__contents-container">
@@ -46,7 +47,7 @@ function Competences({ language }) {
           </h2>
           <ul className="competences__list-container">
             <li className={activeCategorie === 1 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="1">
-              {activeCategorie === 1 ? <span className="competences__arrow second-color bold">► </span> : '- '}
+              {activeCategorie === 1 ? <img src={arrow} alt="arrow" data-categorie="1" className="competences__arrow second-color bold clickable" /> : '- '}
               {text[language].frontend}
             </li>
             {activeCategorie === 1
@@ -63,7 +64,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 2 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="2">
-              {activeCategorie === 2 ? <span className="competences__arrow second-color bold">► </span> : '- '}
+              {activeCategorie === 2 ? <img src={arrow} alt="arrow" data-categorie="2" className="competences__arrow second-color bold clickable" /> : '- '}
               {text[language].integration}
             </li>
             {activeCategorie === 2
@@ -77,7 +78,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 3 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="3">
-              {activeCategorie === 3 ? <span className="competences__arrow second-color bold">► </span> : '- '}
+              {activeCategorie === 3 ? <img src={arrow} alt="arrow" data-categorie="3" className="competences__arrow second-color bold clickable" /> : '- '}
               {text[language].backend}
             </li>
             {activeCategorie === 3
@@ -94,7 +95,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 4 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="4">
-              {activeCategorie === 4 ? <span className="competences__arrow second-color bold">► </span> : '- '}
+              {activeCategorie === 4 ? <img src={arrow} alt="arrow" data-categorie="4" className="competences__arrow second-color bold clickable" /> : '- '}
               {text[language].projectManager}
             </li>
             {activeCategorie === 4

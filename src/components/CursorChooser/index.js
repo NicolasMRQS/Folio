@@ -33,8 +33,9 @@ function CursorChooser({ defaultCursor, setDefaultCursor }) {
 
   return (
     <div className="cursor-chooser clickable" onClick={handleClick}>
-      <input className="cursor-chooser__checkbox" type="checkbox" checked={defaultCursor} readOnly />
-      <img className="language-chooser__img" src={cursor} alt="cursor" />
+      <div className={defaultCursor ? 'cursor-chooser__curstom-cursor' : 'cursor-chooser__curstom-cursor--active'} src={cursor} alt="cursor" />
+      <span>/</span>
+      <img className={defaultCursor ? 'cursor-chooser__img--active' : 'cursor-chooser__img'} src={cursor} alt="cursor" />
     </div>
   );
 }
