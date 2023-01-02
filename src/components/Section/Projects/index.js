@@ -33,6 +33,13 @@ function Projects({ language }) {
           techno={text[language].hicdebasilTechno}
         />
         <ProjectCard
+          label="Jeux d'échec"
+          img="chess"
+          url="https://chess.nmrqs.fr"
+          description={text[language].chessDesc}
+          techno="HTML, CSS, Vanilla JS"
+        />
+        <ProjectCard
           label="Pokémon Quizz"
           img="pokemon"
           description={text[language].pokemonDesc}

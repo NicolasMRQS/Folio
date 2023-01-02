@@ -23,7 +23,7 @@ function App() {
     <ParallaxProvider>
       <Router>
         <main className={defaultCursor ? 'app-defaultcursor' : 'app'}>
-          {defaultCursor ? '' : <Cursor />}
+          {!defaultCursor && <Cursor />}
           <HelloAnimation
             helloAnimation={helloAnimation}
             setHelloAnimation={setHelloAnimation}
