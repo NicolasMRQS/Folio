@@ -13,10 +13,10 @@ function Nav() {
     else if (scroll < 1150) {
       setActiveSection(2);
     }
-    else if (scroll < 2300) {
+    else if (scroll < 2700) {
       setActiveSection(3);
     }
-    else if (scroll > 2300) {
+    else if (scroll > 2700) {
       setActiveSection(4);
     }
   };
