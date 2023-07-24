@@ -1,6 +1,6 @@
 {
     "iam": "Je suis",
-    "developer": "Développeur Frontend",
+    "developer": "Développeur Fullstack Javascript",
     "description": "Ancien technicien audiovisuel, j'ai suivi une formation intensive pour devenir développeur web spécialisé en React. Motivé, curieux et passionné par le code, ma facilité d'apprentissage me permet de m'adapter facilement aux nouveaux environnements.",
     "job": "Je suis actuellement à la recherche de mon futur poste.",
     "hiButton": "Me contacter !",
@@ -20,12 +20,13 @@
     "projectsTitle": "Projets",
     "projectsText": "Mes dernières réalisations",
 
+    "taflDesc": "Freelance",
     "zengardenerDesc": "Projet étudiant en groupe",
     "zengardenerTechno": "React, Redux, Sass, Axios, NodeJS, Express, pgSQL, JWT...",
     "hicdebasilDesc": "Freelance",
     "hicdebasilTechno": "HTML / CSS, Squarespace",
     "chessDesc": "Entraînement algorithmique",
-    "pokemonDesc": "Work in progress...",
+    "pokemonDesc": "Projet perso",
 
     "next": "Et la suite ?",
     "contact": "Gardons contact\u00a0!"

@@ -54,10 +54,10 @@ function Description({ language, helloAnimation }) {
             {text[language].job}
           </p>
           <div className="description__button_container">
-            <a href="mailto:nicolas08.10marques@gmail.com" hidden={helloAnimation}>
+            <a href="mailto:nicolas@nmrqs.fr" hidden={helloAnimation}>
               <Button label={text[language].hiButton} color="base" full />
             </a>
-            <a href="/pdf/CV.pdf" download="CV.pdf" hidden={helloAnimation}>
+            <a href="/pdf/CV.pdf" download="CV - Nicolas Marques.pdf" hidden={helloAnimation}>
               <Button label={text[language].cvButton} color="base" />
             </a>
           </div>

@@ -19,9 +19,16 @@ function Projects({ language }) {
       </div>
       <div className="projects__projects-container">
         <ProjectCard
+          label="Tafl - Jacques Chirac"
+          img="tafl"
+          url="https://jacques-chirac.com"
+          description="Freelance"
+          techno="React, redux-toolkit, NodeJS, SocketIO..."
+        />
+        <ProjectCard
           label="Zen Gardener"
           img="zengardener"
-          url="https://zen-gardener.netlify.app/"
+          url="https://github.com/NicolasMRQS/zen-gardener-front"
           description={text[language].zengardenerDesc}
           techno={text[language].zengardenerTechno}
         />
@@ -33,17 +40,18 @@ function Projects({ language }) {
           techno={text[language].hicdebasilTechno}
         />
         <ProjectCard
-          label="Jeux d'échec"
+          label="Pokémon Quizz"
+          img="pokemon"
+          url="https://pokemonquizz.nmrqs.fr"
+          description={text[language].pokemonDesc}
+          techno="React, Redux, Axios"
+        />
+        <ProjectCard
+          label="Chess"
           img="chess"
           url="https://chess.nmrqs.fr"
           description={text[language].chessDesc}
           techno="HTML, CSS, Vanilla JS"
-        />
-        <ProjectCard
-          label="Pokémon Quizz"
-          img="pokemon"
-          description={text[language].pokemonDesc}
-          techno="React, Axios"
         />
       </div>
     </Section>

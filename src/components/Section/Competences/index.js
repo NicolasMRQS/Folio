@@ -47,13 +47,14 @@ function Competences({ language }) {
           </h2>
           <ul className="competences__list-container">
             <li className={activeCategorie === 1 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="1">
-              {activeCategorie === 1 ? <img src={arrow} alt="arrow" data-categorie="1" className="competences__arrow second-color bold clickable" /> : '- '}
+              {activeCategorie === 1 ? <img src={arrow} alt="arrow" data-categorie="1" className="competences__arrow second-color bold clickable" /> : ''}
               {text[language].frontend}
             </li>
             {activeCategorie === 1
               && (
               <div className={changingCategorie ? 'competences__card-container--smallscreen closed' : 'competences__card-container--smallscreen'}>
                 <Card label="Javascript" logo="javascript" />
+                <Card label="Typescript" logo="typescript" />
                 <Card label="React" logo="react" />
                 <Card label="Redux" logo="redux" />
                 <Card label="Axios" logo="axios" />
@@ -64,7 +65,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 2 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="2">
-              {activeCategorie === 2 ? <img src={arrow} alt="arrow" data-categorie="2" className="competences__arrow second-color bold clickable" /> : '- '}
+              {activeCategorie === 2 ? <img src={arrow} alt="arrow" data-categorie="2" className="competences__arrow second-color bold clickable" /> : ''}
               {text[language].integration}
             </li>
             {activeCategorie === 2
@@ -78,7 +79,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 3 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="3">
-              {activeCategorie === 3 ? <img src={arrow} alt="arrow" data-categorie="3" className="competences__arrow second-color bold clickable" /> : '- '}
+              {activeCategorie === 3 ? <img src={arrow} alt="arrow" data-categorie="3" className="competences__arrow second-color bold clickable" /> : ''}
               {text[language].backend}
             </li>
             {activeCategorie === 3
@@ -95,7 +96,7 @@ function Competences({ language }) {
               </div>
               )}
             <li className={activeCategorie === 4 ? 'competences__list--active clickable' : 'competences__list clickable'} onClick={handleClick} data-categorie="4">
-              {activeCategorie === 4 ? <img src={arrow} alt="arrow" data-categorie="4" className="competences__arrow second-color bold clickable" /> : '- '}
+              {activeCategorie === 4 ? <img src={arrow} alt="arrow" data-categorie="4" className="competences__arrow second-color bold clickable" /> : ''}
               {text[language].projectManager}
             </li>
             {activeCategorie === 4

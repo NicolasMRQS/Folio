@@ -16,6 +16,7 @@ import socketio from './socketio.png';
 import sql from './sql.png';
 import strapi from './strapi.png';
 import tailwind from './tailwind.png';
+import typescript from './typescript.png';
 import webpack from './webpack.png';
 
 export default {
@@ -37,5 +38,6 @@ export default {
   sql,
   strapi,
   tailwind,
+  typescript,
   webpack,
 };

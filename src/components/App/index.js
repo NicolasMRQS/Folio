@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
 import Nav from '../Nav';
 import Competences from '../Section/Competences';
@@ -22,24 +23,32 @@ function App() {
   return (
     <ParallaxProvider>
       <Router>
-        <main className={defaultCursor ? 'app-defaultcursor' : 'app'}>
-          {!defaultCursor && <Cursor />}
-          <HelloAnimation
-            helloAnimation={helloAnimation}
-            setHelloAnimation={setHelloAnimation}
-            language={language}
-          >
-            <LanguageChooser language={language} setLanguage={setLanguage} />
-            <CursorChooser defaultCursor={defaultCursor} setDefaultCursor={setDefaultCursor} />
-            <Nav />
-            <section>
-              <Description language={language} />
-              <Competences language={language} />
-              <Projects language={language} />
-              <Contact language={language} />
-            </section>
-          </HelloAnimation>
-        </main>
+        <Routes>
+          <Route
+            path="/"
+            element={(
+              <main className={defaultCursor ? 'app-defaultcursor' : 'app'}>
+                {!defaultCursor && <Cursor />}
+                <HelloAnimation
+                  helloAnimation={helloAnimation}
+                  setHelloAnimation={setHelloAnimation}
+                  language={language}
+                >
+                  <LanguageChooser language={language} setLanguage={setLanguage} />
+                  <CursorChooser defaultCursor={defaultCursor} setDefaultCursor={setDefaultCursor} />
+                  <Nav />
+                  <section>
+                    <Description language={language} />
+                    <Competences language={language} />
+                    <Projects language={language} />
+                    <Contact language={language} />
+                  </section>
+                </HelloAnimation>
+              </main>
+        )}
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </Router>
     </ParallaxProvider>
   );

@@ -32,6 +32,7 @@ function CardContainer({ activeCategorie, language }) {
     <div className="card-container" ref={listRef}>
       <div className="card-container__cards-list">
         <Card label="Javascript" logo="javascript" />
+        <Card label="Typescript" logo="typescript" />
         <Card label="React" logo="react" />
         <Card label="Redux" logo="redux" />
         <Card label="Axios" logo="axios" />
