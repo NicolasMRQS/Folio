@@ -5,7 +5,7 @@ import projectsData from '../../../../assets/img/projects/project';
 import './style.scss';
 
 function ProjectCard({
-  label, img, url, description, techno,
+  label, img, url, description, techno, note,
 }) {
   return (
     <a href={url} target="_blank" rel="noreferrer" className="project-card clickable">
@@ -23,6 +23,11 @@ function ProjectCard({
         <div className="project-card__technos">
           {techno}
         </div>
+        {note && (
+        <div className="project-card__technos">
+          {note}
+        </div>
+        )}
       </div>
     </a>
   );
@@ -34,12 +39,14 @@ ProjectCard.propTypes = {
   url: PropTypes.string,
   description: PropTypes.string,
   techno: PropTypes.string,
+  note: PropTypes.string,
 };
 
 ProjectCard.defaultProps = {
   url: null,
   description: null,
   techno: null,
+  note: null,
 };
 
 export default ProjectCard;

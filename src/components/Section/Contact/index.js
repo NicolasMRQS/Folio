@@ -16,7 +16,7 @@ function Contact({ language }) {
       </div>
       <div className="contact__button-container">
         <div className="contact__sayhi-button">
-          <a href="mailto:nicolas08.10marques@gmail.com">
+          <a href="mailto:nicolas@nmrqs.fr">
             <Button label="Email" color="white" full />
           </a>
         </div>

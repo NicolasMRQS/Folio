@@ -1,6 +1,6 @@
 {
     "iam": "I am",
-    "developer": "Frontend Developer",
+    "developer": "Fullstack Javascript Developer",
     "description": "Former audiovisual technician, I attended an intensive training to be a web developer specialized in React. Motivated, curious and passionate about coding, my ease of learning allows me to adapt easily to new environments.",
     "job": "I am currently looking for my first job.",
     "hiButton": "Say hi!",
@@ -25,7 +25,7 @@
     "hicdebasilDesc": "Freelance",
     "hicdebasilTechno": "HTML / CSS, Squarespace",
     "chessDesc": "Algorithmic training",
-    "pokemonDesc": "WIP...",
+    "pokemonDesc": "Personal project",
 
     "next": "What's next ?",
     "contact": "Get in touch"
