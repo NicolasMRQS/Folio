@@ -3,6 +3,7 @@
 ## Description
 
 Mon portefolio personnel me présentant moi, mes compétences et mes projets.
+Créé avec React.
 
 ## Lien
 
