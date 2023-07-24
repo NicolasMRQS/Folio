@@ -1,9 +1,9 @@
-### My Folio
+# Folio - Nicolas Marques
 
---- Work In Progress ---
+## Description
 
-TODO :
-- bouton swap cursor
-- competences arrow instead of "-" and "-" on other, only arrow moves
-- opacity on violet circle : 0.8
-- change pkmn img
+Mon portefolio personnel
+
+## Lien
+
+[Lien vers le folio](https://nicolasmarques.fr)
