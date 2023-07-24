@@ -2,8 +2,8 @@
 
 ## Description
 
-Mon portefolio personnel
+Mon portefolio personnel me présentant moi, mes compétences et mes projets.
 
 ## Lien
 
-[Lien vers le folio](https://nicolasmarques.fr)
+[Lien vers le site en ligne](https://nicolasmarques.fr)
